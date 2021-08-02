@@ -1,4 +1,4 @@
-package Modelo;
+package com.PI_Alimentizze.Alimentizze.modelo;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
