@@ -13,8 +13,6 @@ import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
-import org.hibernate.validator.constraints.URL;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
@@ -37,9 +35,9 @@ public class Postagem {
 	private Date dataPostagem = new java.sql.Date(System.currentTimeMillis());
 	
 	@NotBlank
-	private Date dataExpiracao = new java.sql.Date(System.currentTimeMillis());
+	private String dataExpiracao;
 	
-	@URL
+	@NotBlank
 	private String link; //procurar uma instancia para o Link
 	
 	@ManyToOne
@@ -78,11 +76,11 @@ public class Postagem {
 		this.dataPostagem = dataPostagem;
 	}
 
-	public Date getDataExpiracao() {
+	public String getDataExpiracao() {
 		return dataExpiracao;
 	}
 
-	public void setDataExpiracao(Date dataExpiracao) {
+	public void setDataExpiracao(String dataExpiracao) {
 		this.dataExpiracao = dataExpiracao;
 	}
 
@@ -101,7 +99,5 @@ public class Postagem {
 	public void setTema(Tema tema) {
 		this.tema = tema;
 	}
-	
-	
-	
+ 
 }
