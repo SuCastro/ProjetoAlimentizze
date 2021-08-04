@@ -1,4 +1,4 @@
-package com.PI_Alimentizze.Alimentizze.controller;
+package com.PI_Alimentizze.Alimentizze.controle;
 
 import java.util.List;
 
@@ -21,7 +21,7 @@ import com.PI_Alimentizze.Alimentizze.repositorio.TemaRepositorio;
 @RestController
 @RequestMapping("/tema")
 @CrossOrigin("*")
-public class TemaController {
+public class TemaControle {
 
 	@Autowired
 	private TemaRepositorio repository;
