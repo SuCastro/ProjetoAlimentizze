@@ -1,0 +1,270 @@
+{
+	"info": {
+		"_postman_id": "2af08c42-4fa4-40ed-92c6-a9935485c5b5",
+		"name": "Alimentizze testes de postagem",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/Postagem",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Postagem",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Postagem"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/Postagem",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"titulo\" : \"Precisandinho de grana\",\r\n  \"descricao\" : \"sujei o nome com uber \" ,\r\n  \"dataExpiracao\" :\"08/08/2021\" ,\r\n  \"link\" : \"sem link socorro por favor\" ,\r\n  \"tema\" : {\r\n      \"id\" : 2\r\n\r\n  }\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Postagem",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Postagem"
+					]
+				},
+				"description": "post populando tabela postagem"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/Postagem",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1,\r\n    \"titulo\": \"Precisandinho de grana\",\r\n    \"descricao\": \"sujei o nome com uber \",\r\n    \"dataPostagem\": \"2021-08-04\",\r\n    \"dataExpiracao\": \"08/08/2021\",\r\n    \"link\": \"sem link socorro por favor\",\r\n    \"tema\": {\r\n        \"id\": 2,\r\n        \"categoria\": \"Dinheiro\",\r\n        \"postagem\": null\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Postagem",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Postagem"
+					]
+				},
+				"description": "putizin atualizando o post"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/Postagem",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \r\n    \"titulo\": \"Comida para pessoinhas com fominha\",\r\n    \"descricao\": \"Atravessando dificuldades durante a pandemia preciso de um cume \",\r\n    \"dataPostagem\": \"2021-08-04\",\r\n    \"dataExpiracao\": \"08/08/2021\",\r\n    \"link\": \"sem link liga 4002890022 e procura pela Sil\",\r\n    \"tema\": {\r\n        \"id\": 1,\r\n        \"categoria\": \"Comida\",\r\n        \"postagem\": null\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Postagem",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Postagem"
+					]
+				},
+				"description": "postzin de categoria 1"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/Postagem",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \r\n    \"titulo\": \"Museu precisa ser varrido apos incendio\",\r\n    \"descricao\": \"precisamos de voluntarios para ajudar na organização do museu \",\r\n    \"dataPostagem\": \"2021-08-04\",\r\n    \"dataExpiracao\": \"08/08/2021\",\r\n    \"link\": \"sem link cola ali no anhagabau as 17\",\r\n    \"tema\": {\r\n        \"id\": 3,\r\n        \"categoria\": \"Ação\",\r\n        \"postagem\": null\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Postagem",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Postagem"
+					]
+				},
+				"description": "postizinh de numero 3 "
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/Postagem",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \r\n    \"titulo\": \"Vamos limpar o ibira de cima abaixo \",\r\n    \"descricao\": \"Precisamos de pessoas para escovar os peixes e acaricias os cisneis \",\r\n    \"dataPostagem\": \"2021-08-04\",\r\n    \"dataExpiracao\": \"08/08/2021\",\r\n    \"link\": \"sem link cola ali na ana rosa e vamo andando pra la a partir das 10\",\r\n    \"tema\": {\r\n        \"id\": 3,\r\n        \"categoria\": \"Ação\",\r\n        \"postagem\": null\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Postagem",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Postagem"
+					]
+				},
+				"description": "postizinh que vai ser apagado pra tristeza dos peixin"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/Postagem",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \r\n    \"titulo\": \"Vamos limpar o ibira de cima abaixo \",\r\n    \"descricao\": \"Precisamos de pessoas para escovar os peixes e acaricias os cisneis \",\r\n    \"dataPostagem\": \"2021-08-04\",\r\n    \"dataExpiracao\": \"08/08/2021\",\r\n    \"link\": \"sem link cola ali na ana rosa e vamo andando pra la a partir das 10\",\r\n    \"tema\": {\r\n        \"id\": 3,\r\n        \"categoria\": \"Ação\",\r\n        \"postagem\": null\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Postagem/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Postagem",
+						"4"
+					]
+				},
+				"description": "get especifico de ID"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/Postagem",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \r\n    \"titulo\": \"Vamos limpar o ibira de cima abaixo \",\r\n    \"descricao\": \"Precisamos de pessoas para escovar os peixes e acaricias os cisneis \",\r\n    \"dataPostagem\": \"2021-08-04\",\r\n    \"dataExpiracao\": \"08/08/2021\",\r\n    \"link\": \"sem link cola ali na ana rosa e vamo andando pra la a partir das 10\",\r\n    \"tema\": {\r\n        \"id\": 3,\r\n        \"categoria\": \"Ação\",\r\n        \"postagem\": null\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Postagem/titulo/museu",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Postagem",
+						"titulo",
+						"museu"
+					]
+				},
+				"description": "get especifico por titulo"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/Postagem",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \r\n    \"titulo\": \"Vamos limpar o ibira de cima abaixo \",\r\n    \"descricao\": \"Precisamos de pessoas para escovar os peixes e acaricias os cisneis \",\r\n    \"dataPostagem\": \"2021-08-04\",\r\n    \"dataExpiracao\": \"08/08/2021\",\r\n    \"link\": \"sem link cola ali na ana rosa e vamo andando pra la a partir das 10\",\r\n    \"tema\": {\r\n        \"id\": 3,\r\n        \"categoria\": \"Ação\",\r\n        \"postagem\": null\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Postagem/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Postagem",
+						"4"
+					]
+				},
+				"description": "deletamos a ação de escova peixin"
+			},
+			"response": []
+		}
+	]
+}
