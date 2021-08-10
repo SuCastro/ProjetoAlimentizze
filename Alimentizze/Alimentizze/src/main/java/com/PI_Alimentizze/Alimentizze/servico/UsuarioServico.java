@@ -50,6 +50,7 @@ public class UsuarioServico {
 				usuarioParaAutenticar.setToken(autorizacaoHeader);
 				usuarioParaAutenticar.setId(usuarioExistente.getId());
 				usuarioParaAutenticar.setNomeCompleto(usuarioExistente.getNomeCompleto());
+				usuarioParaAutenticar.setTipoDeUsuario(usuarioExistente.getTipoDeUsuario());
 				usuarioParaAutenticar.setSenha(usuarioExistente.getSenha());
 				return Optional.ofNullable(usuarioParaAutenticar);
 			} else {
