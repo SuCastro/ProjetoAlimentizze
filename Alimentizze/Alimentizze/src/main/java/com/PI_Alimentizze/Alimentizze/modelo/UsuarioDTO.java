@@ -8,10 +8,10 @@ import javax.validation.constraints.Size;
 public class UsuarioDTO {
 
 	
-	@NotNull
+
 	private Long id;
 	
-	@NotBlank(message = "obrigatório nome completo")
+	
 	private String nomeCompleto;
 	
 	
@@ -24,7 +24,7 @@ public class UsuarioDTO {
 	private String senha;
 	
 	
-	@NotBlank (message = "obrigatório um tipo de usuario")
+	
 	private String tipoDeUsuario;
 	
 	
