@@ -8,9 +8,6 @@ import org.springframework.stereotype.Repository;
 
 import com.PI_Alimentizze.Alimentizze.modelo.Usuario;
 
-
-
-
 @Repository
 public interface UsuarioRepositorio extends JpaRepository<Usuario, Long>{
 	
@@ -24,9 +21,7 @@ public interface UsuarioRepositorio extends JpaRepository<Usuario, Long>{
  *
  */
 
-	public Optional<Usuario> findbyEmail (String email);
-	
-	
+	public Optional<Usuario> findByEmail (String email);
 	
 	
 	/** * Metodo utilizado para pesquisar coluna nomeCompleto da tabela Usuario
@@ -38,7 +33,7 @@ public interface UsuarioRepositorio extends JpaRepository<Usuario, Long>{
 	 */
 
 	
-	List<Usuario> findbynomeCompletoContainingIgnoreCase (String nomeCompleto);
+	List<Usuario> findByNomeCompletoContainingIgnoreCase (String nomeCompleto);
 	
 	
 	
