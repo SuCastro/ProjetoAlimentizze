@@ -69,7 +69,7 @@ public class UsuarioControlador {
 		}
 
 		@GetMapping("/{id}")
-		public ResponseEntity<Usuario> buscarPorId(@PathVariable(value = "id_usuario") Long id) {
+		public ResponseEntity<Usuario> buscarPorId(@PathVariable(value = "id") Long id) {
 			return ResponseEntity.status(200).body(repositorio.findById(id).get());
 		}
 
