@@ -31,11 +31,12 @@ public class PostagemServico {
 	 * @since 1.5
 	 * @author Projeto Alimentizze
 	 */
+	
 	public Optional<?> cadastrarPostagem(Postagem novaPostagem) {
 		Optional<Tema> objetoExistente = repositorioT.findById(novaPostagem.getTema().getId());
-		return repositorioU.findById(novaPostagem.getId()).map(usuarioExistente -> {
+		return repositorioU.findById(novaPostagem.getUsuario().getId()).map(usuarioExistente -> {
 			if (objetoExistente.isPresent()) {
-				//novaPostagem.setEmail(usuarioExistente);
+				novaPostagem.setUsuario(usuarioExistente);
 				novaPostagem.setTema(objetoExistente.get());
 				return Optional.ofNullable(repositorioP.save(novaPostagem));
 			} else {
