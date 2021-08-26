@@ -1,0 +1,42 @@
+<div class="container-fluid fundo-contatos">
+
+    <div class="row d-flex mt-6">
+        <div class="pl-3 ">
+
+            <img src="../../assets/img/icones/Alimentizze logo.png" alt="">
+
+
+        </div>
+
+    </div>
+
+
+    <div class="row mt-6 text-white">
+        <div>
+
+            <h1 class="center ">Entre em Contato Conosco</h1>
+            <h2>Mande uma mensagem:</h2>
+            <form>
+                <label for="nome">Nome:</label> <br>
+                <input type="text" id="nome" onkeyup='validaNome()'>
+                <div id="txtNome"></div>
+                <br>
+                <label for="email">E-mail:</label> <br>
+                <input type="email" id="email" onkeyup='validaEmail()'>
+                <div id="txtEmail"></div>
+                <br>
+                <label for="assunto">Assunto:</label> <br>
+                <textarea name="assunto" id="assunto" cols="50" rows="10" onkeyup="validaAssunto()"></textarea>
+                <div id="txtAssunto"></div>
+                <br>
+                <br>
+                <button onclick="enviar()">Enviar</button>
+            </form>
+        </div>
+
+    </div>
+
+
+
+
+</div>
