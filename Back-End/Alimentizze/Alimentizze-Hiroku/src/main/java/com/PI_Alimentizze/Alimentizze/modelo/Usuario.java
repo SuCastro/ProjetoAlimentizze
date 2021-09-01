@@ -40,10 +40,13 @@ public class Usuario
 	
 	@NotBlank (message = "obrigatório um tipo de usuario")
 	private String tipoDeUsuario;
+	
+	private String foto;
 
 	@OneToMany(mappedBy = "usuario", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties({"usuario"})
 	private List<Postagem> minhasPostagens = new ArrayList<>();
+
 
 	public Usuario() {
 		super();
@@ -118,6 +121,16 @@ public class Usuario
 	public void setTipoDeUsuario(String tipoDeUsuario)
 	{
 		this.tipoDeUsuario = tipoDeUsuario;
+	}
+
+
+	public String getFoto() {
+		return foto;
+	}
+
+
+	public void setFoto(String foto) {
+		this.foto = foto;
 	}
 
 
