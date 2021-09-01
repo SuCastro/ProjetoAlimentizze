@@ -1,0 +1,18 @@
+#img-bg{
+  background-image: url("https://imgur.com/IiKCcsp.jpg");
+
+  min-height: 700px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.mxr-7{
+  margin-right: 7px;
+}
+
+.fundo-cadastrar{
+  background-color: #10501C;
+}

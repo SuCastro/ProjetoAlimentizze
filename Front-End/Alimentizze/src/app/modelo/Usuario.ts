@@ -6,9 +6,8 @@ export class Usuario{
     public email: string
     public foto: string
     public nomeCompleto: string
-    public tipoDeUsuario: string 
+    public tipoDeUsuario: string
     public senha:string
     public minhasPostagens: Postagem[]
-
 
 }
