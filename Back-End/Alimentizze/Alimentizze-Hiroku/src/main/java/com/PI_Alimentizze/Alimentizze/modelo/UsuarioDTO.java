@@ -28,6 +28,8 @@ public class UsuarioDTO {
 	
 	
 	private String token;
+	
+	private String foto;
 
 
 	public Long getId() {
@@ -87,6 +89,16 @@ public class UsuarioDTO {
 
 	public void setToken(String token) {
 		this.token = token;
+	}
+
+
+	public String getFoto() {
+		return foto;
+	}
+
+
+	public void setFoto(String foto) {
+		this.foto = foto;
 	}
 	
 	
