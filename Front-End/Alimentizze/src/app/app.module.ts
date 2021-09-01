@@ -9,6 +9,9 @@ import { RodapeComponent } from './rodape/rodape.component';
 import { ContatosComponent } from './contatos/contatos.component';
 import { EntrarComponent } from './entrar/entrar.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule, HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -23,9 +26,15 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    CommonModule
   ],
-  providers: [],
+  providers: [{
+    provide: LocationStrategy,
+    useClass: HashLocationStrategy
+  } ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
