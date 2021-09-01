@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment.prod';
 import { Usuario } from '../modelo/Usuario';
 import { UsuarioDTO } from '../modelo/UsuarioDTO';
 
@@ -15,7 +16,7 @@ export class AuthService {
   ) { }
 
   entrar(usuarioDTO: UsuarioDTO): Observable<UsuarioDTO>{
-    return this.http.post<UsuarioDTO>('https://projetoalimentizze.herokuapp.com/usuario/autenticar',usuarioDTO)
+    return this.http.put<UsuarioDTO>('https://projetoalimentizze.herokuapp.com/usuario/autenticar',usuarioDTO)
 
 
   }
@@ -30,14 +31,14 @@ export class AuthService {
 
 
 
-  /*logado(){
+  logado(){
     let ok = false // == let ok: boolean = false ---> pode ser escrita com mais tipagem
 
-    if(environment. != ''){
+    if(environment.token != ''){
       ok = true
     }
 
     return ok
-  }*/
+  }
 
 }
