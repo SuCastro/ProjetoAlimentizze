@@ -8,6 +8,10 @@
   background-size: cover;
 
 }
+.al{
+
+  color:#10501C;
+}
 
 .mxr-7{
   margin-right: 7px;
@@ -16,3 +20,20 @@
 .fundo-cadastrar{
   background-color: #10501C;
 }
+.radio{
+
+  border-radius: 35px 35px
+}
+.radios{
+  border-radius: 25px 25px 
+
+}
+.lar{
+
+  background-color: #FF914D;
+}
+.zul{
+  
+   background-color:  #00C2CB;
+}
+

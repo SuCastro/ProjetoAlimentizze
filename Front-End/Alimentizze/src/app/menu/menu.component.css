@@ -5,3 +5,14 @@
     padding-left: 70px;
     
 }
+.radio{
+
+    border-radius: 35px 35px
+ }
+ .radios{
+    border-radius: 25px 25px 
+
+ }
+ /*.imgdd{
+    background-image: url(/src/assets/img/icones/arrow-down-filled-triangle.png)
+ }*/
