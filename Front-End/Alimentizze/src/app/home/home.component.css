@@ -1,7 +1,15 @@
 .fundo-home{
-    background-color: #7ef794;
+    background-color:#CAEDBA;
 }
 
 .p-70{
     padding-left: 70px;
 }
+.radio{
+
+    border-radius: 35px 35px
+ }
+ .radios{
+    border-radius: 25px 25px 
+
+ }

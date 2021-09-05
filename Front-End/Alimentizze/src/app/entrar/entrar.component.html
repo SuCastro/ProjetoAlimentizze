@@ -1,46 +1,52 @@
-<div class="container-fluid fundo-entrar text-white">
+<div class="container-fluid fundo-entrar ">
 
     <div class="row d-flex align-items-center">
 
-        <div class="col-md-6">
+        <div class="col-md-4">
 
-            <div class="row d-flex justify-content-center">
+            <div class="row d-flex bg-light justify-content-center radio mt-5 ml-5 ">
                 <div class="col-md-6">
 
-                    <h1 class="text-center mb-3">Login</h1>
+                    <h1 class="text-center al mt-3 mb-3">Login</h1>
                 </div>
-                <div class="form-group">
+                <div class="form-group ">
                     <label for="email">E-mail</label>
-                    <input class="form-control" type="text" name="email" id="email" placeholder="Seu e-mail"
+                    <input class="form-control radios" type="text" name="email" id="email" placeholder="Seu e-mail"
                         [(ngModel)]="usuarioDTO.email">
                 </div>
 
                 <div class="form-group">
                     <label for="senha">Senha</label>
-                    <input class="form-control" type="password" name="senha" id="senha" placeholder="Sua senha"
+                    <input class="form-control radios" type="password" name="senha" id="senha" placeholder="Sua senha"
                         [(ngModel)]="usuarioDTO.senha">
                 </div>
 
                 <div class="d-flex justify-content-center">
-                    <button type="submit" class="btn btn-success" (click)="entrar()"> Entrar</button>
+                    <button type="submit" class="btn btn-lg btn-block
+                    btn-info text-white  "  (click)="entrar()"> <h4>Entrar</h4></button>
                 </div>
 
-                <hr class="mt-5 mb-5">
+                <p class="text-center mt-5">Não tem uma conta?</p>
 
-                <p class="text-center">
-                    Não tem uma conta? <a routerLink="/cadastrar">Cadastre-se</a>
-                </p>
+                <hr class="mt-2 mb-4">
+
+                <div class="d-flex justify-content-center mb-4">
+                    <button class=" btn btn-lg btn-block text-center radio lar ">
+                        <a class="text-white" routerLink="/cadastrar">Cadastre-se</a>
+                    </button>
+                </div>
+                
 
 
             </div>
-
+           
             
         </div>
 
-        
-            <div class="col-md-6" id="img-bg"></div>
 
-        
+        <div class="col-md-8" id="img-bg"></div>
+
+
 
 
 

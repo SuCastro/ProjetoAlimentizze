@@ -1,7 +1,7 @@
 #img-bg{
     background-image: url("https://imgur.com/eBfEB6P.jpg");
 
-    min-height: 500px;
+    min-height: 627px;
 
     background-position: center;
     background-repeat: no-repeat;
@@ -11,3 +11,21 @@
 .fundo-entrar{
     background-color: #10501C;
   }
+
+ .radio{
+
+    border-radius: 35px 35px
+ }
+ .radios{
+    border-radius: 25px 25px 
+
+ }
+
+ .al{
+
+    color:#10501C;
+ }
+.lar{
+
+    background-color: #FF914D;
+}
