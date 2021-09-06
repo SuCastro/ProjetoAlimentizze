@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light  fundo-menu">
+<nav class="navbar navbar-expand-lg navbar-light  fundo-menu" style="height: 4rem;">
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
         aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
@@ -12,12 +12,14 @@
 
         <ul class="navbar-nav mr-auto d-flex align-items-center">
             <li class="nav-item active">
-                <img src="../../assets/img/icones/Alimentizze (1).png" alt="LoGO Alimentizze" width="90px"
-                    height="90px" class="img-fluid rounded-circle" routerLink='/home'>
+                <img src="../../assets/img/icones/Alimentizze (1).png" alt="LoGO Alimentizze" width="100px"
+                    height="100px" class="img-fluid rounded-circle" routerLink='/home'>
             </li>
             <li class="nav-item">
+              <i class="fas fa-search"></i>
                 <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2 radio" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+                    <input  style="width: 20rem; height:3rem ;" class="form-control mr-sm-2 radio" type="search" placeholder="Pesquisar " aria-label="Pesquisar" >
+                    <i class="fas fa-search"></i>
                 </form>
             </li>
 
@@ -48,21 +50,23 @@
 
 
         </ul>
-        <ul class="navbar-nav ml-auto d-flex align-items-center  ">
+        
+          <ul class="navbar-nav ml-auto d-flex align-items-center  ">
 
             <li class="nav-item dropdown m-10" style="margin-right: 130px;" >
                 
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" 
+              
+              <a class="nav-link dropdown"  id="navbarDropdown" 
                 role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
+                aria-haspopup="true" aria-expanded="false" ><img style="width:30px ; height:30px; color-success" src="https://icon-library.com/images/scroll-down-icon/scroll-down-icon-15.jpg" alt="listbarras">
 
                 </a>
                 <div class="dropdown-menu "  aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item " href="#">Conta</a>
-                    <a class="dropdown-item" href="#">Editar perfil</a>
-                    <a class="dropdown-item" href="#">Configurações</a>
+                    <a class="dropdown-item " href="">Conta</a>
+                    <a class="dropdown-item" href="">Editar perfil</a>
+                    <a class="dropdown-item" href="">Configurações</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" href="">
                        
                         <img src="../../assets/img/icones/Alimentizze (1).png" alt="" width="70px" height="70px"
                         class="img-fluid rounded-circle"  routerLink='/sobre-nos'> Sobre nós </a>
@@ -70,10 +74,12 @@
                         <a class="dropdown-item" href="#" routerLink='/contatos'>Contatos</a>
 
                         <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Sair</a>
+                    <a class="dropdown-item" href="">Sair</a>
                 </div>
             </li>
         </ul>
+        
+        
 
     </div>
 </nav>
