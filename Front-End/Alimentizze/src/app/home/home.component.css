@@ -3,13 +3,32 @@
 }
 
 .p-70{
-    padding-left: 70px;
+    padding-left: 25px;
 }
 .radio{
 
     border-radius: 35px 35px
- }
+ 
+  }
  .radios{
     border-radius: 25px 25px 
 
  }
+
+ .topradios{
+ 
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+
+}
+
+.fundo-menu{
+  background-color: #10501C;
+}
+
+.bottomradios{
+
+border-bottom-left-radius: 25px;
+border-bottom-right-radius: 25px;
+border-bottom-style: groove;
+}
