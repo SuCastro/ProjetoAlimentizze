@@ -27,6 +27,10 @@ export class CadastrarComponent implements OnInit {
 
   }
 
+  selecionarRadio(select: string){
+    this.usuario.tipoDeUsuario = select;
+  }
+
   confirmSenha(event: any) {
     this.confirmarSenha = event.target.value
   }
