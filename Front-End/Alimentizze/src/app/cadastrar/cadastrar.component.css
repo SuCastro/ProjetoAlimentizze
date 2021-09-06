@@ -1,16 +1,11 @@
-#img-bg{
-  background-image: url("https://imgur.com/IiKCcsp.jpg");
-
-  min-height: 700px;
-
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-}
 .al{
 
   color:#10501C;
+}
+
+
+.mxr-150{
+  margin-right: 70px;
 }
 
 .mxr-7{
@@ -18,7 +13,7 @@
 }
 
 .fundo-cadastrar{
-  background-color: #10501C;
+  background-color: #0F501D;
 }
 .radio{
 
@@ -35,5 +30,27 @@
 .zul{
   
    background-color:  #00C2CB;
+}
+
+.zulSelect{
+
+  
+   color:#00C2CB;
+}
+
+.fundoVerdinClarin{
+
+  background-color: #CAEDBA;
+
+}
+
+.al{
+
+  color:#0F501D;
+}
+
+.fundoForms{
+
+  background-color: #DCF1D3;
 }
 

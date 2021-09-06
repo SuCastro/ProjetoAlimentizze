@@ -1,23 +1,23 @@
-<div class="container-fluid fundo-entrar ">
+<div class="container-fluid fundo-entrar  w-100">
 
-    <div class="row d-flex align-items-center">
+    <div class="row d-flex align-items-center ">
 
         <div class="col-md-4">
 
-            <div class="row d-flex bg-light justify-content-center radio mt-5 ml-5 ">
+            <div class="row d-flex justify-content-center radio mt-5 ml-5 fundoForms">
                 <div class="col-md-6">
 
                     <h1 class="text-center al mt-3 mb-3">Login</h1>
                 </div>
                 <div class="form-group ">
-                    <label for="email">E-mail</label>
-                    <input class="form-control radios" type="text" name="email" id="email" placeholder="Seu e-mail"
+                    
+                    <input class="form-control radios fw-bold fundoVerdinClarin al" type="text" name="email" id="email" placeholder="E-mail:"
                         [(ngModel)]="usuarioDTO.email">
                 </div>
 
                 <div class="form-group">
-                    <label for="senha">Senha</label>
-                    <input class="form-control radios" type="password" name="senha" id="senha" placeholder="Sua senha"
+                    
+                    <input class="form-control radios fw-bold fundoVerdinClarin al" type="password" name="senha" id="senha" placeholder="Senha:"
                         [(ngModel)]="usuarioDTO.senha">
                 </div>
 
@@ -43,8 +43,13 @@
             
         </div>
 
+       
+        <div class="col-md-8 d-flex justify-content-center">
 
-        <div class="col-md-8" id="img-bg"></div>
+
+            <img src="../../assets/img/imagens/Alimentizze entrar.png" alt="imagem entrada Alimentizze" width="625px" height="625px">
+
+        </div>
 
 
 
