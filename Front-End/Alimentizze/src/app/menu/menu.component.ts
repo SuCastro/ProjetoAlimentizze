@@ -18,6 +18,12 @@ export class MenuComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+
+    if (environment.token == "") {
+      alert('Sua seção expirou, faça o login novamente.')
+      this.router.navigate(['/entrar'])
+    }
+    
   }
   sair(){
     this.router.navigate(['/entrar'])
@@ -25,6 +31,7 @@ export class MenuComponent implements OnInit {
     environment.nomeCompleto = ''
     environment.foto = ''
     environment.id = 0
+    environment.email = ''
   
   
   
