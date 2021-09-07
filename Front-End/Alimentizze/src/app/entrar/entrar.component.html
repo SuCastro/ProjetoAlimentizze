@@ -1,0 +1,60 @@
+<div class="container-fluid fundo-entrar  w-100">
+
+    <div class="row d-flex align-items-center ">
+
+        <div class="col-md-4">
+
+            <div class="row d-flex justify-content-center radio mt-5 ml-5 fundoForms">
+                <div class="col-md-6">
+
+                    <h1 class="text-center al mt-3 mb-3">Login</h1>
+                </div>
+                <div class="form-group ">
+                    
+                    <input class="form-control radios fw-bold fundoVerdinClarin al" type="text" name="email" id="email" placeholder="E-mail:"
+                        [(ngModel)]="usuarioDTO.email">
+                </div>
+
+                <div class="form-group">
+                    
+                    <input class="form-control radios fw-bold fundoVerdinClarin al" type="password" name="senha" id="senha" placeholder="Senha:"
+                        [(ngModel)]="usuarioDTO.senha">
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-lg btn-block
+                    btn-info text-white  "  (click)="entrar()"> <h4>Entrar</h4></button>
+                </div>
+
+                <p class="text-center mt-5">Não tem uma conta?</p>
+
+                <hr class="mt-2 mb-4">
+
+                <div class="d-flex justify-content-center mb-4">
+                    <button class=" btn btn-lg btn-block text-center radio lar ">
+                        <a class="btn btn-outline text-white" routerLink="/cadastrar">Cadastre-se</a>
+                    </button>
+                </div>
+                
+
+
+            </div>
+           
+            
+        </div>
+
+       
+        <div class="col-md-8 d-flex justify-content-center">
+
+
+            <img src="../../assets/img/imagens/Alimentizze entrar.png" alt="imagem entrada Alimentizze" width="625px" height="625px">
+
+        </div>
+
+
+
+
+
+    </div>
+
+</div>
