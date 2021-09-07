@@ -42,11 +42,13 @@ entrar(){
     environment.nomeCompleto = this.usuarioDTO.nomeCompleto
     environment.foto = this.usuarioDTO.foto
     environment.id = this.usuarioDTO.id
+    environment.email = this.usuarioDTO.email
 
     console.log(environment.token)
     console.log(environment.nomeCompleto)
     console.log(environment.foto)
     console.log(environment.id)
+    console.log(environment.email)
 
     this.router.navigate(["/home"])
 
