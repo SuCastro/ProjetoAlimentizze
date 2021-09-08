@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   nome = environment.nomeCompleto
   foto = environment.foto
   id = environment.id
-  tipo = environment.tipoDeUsuario
+  tipo:string;
   
 
  
@@ -32,12 +32,13 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     window.scroll(0,0)
-
+this.tipo = environment.tipoDeUsuario
     if (environment.token == "") {
       alert('Sua seção expirou, faça o login novamente.')
       this.router.navigate(['/entrar'])
     }
-
+    console.log("~foto "+this.foto)
+    console.log("~tipo "+this.tipo)
   }
 
   
