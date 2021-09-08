@@ -11,7 +11,7 @@
                 <div class="col-md-3">
 
                     <div class="form-goup">
-                        <input [(ngModel)]='tema.categoria' type="text" class="form-control" id="categoria"
+                        <input [(ngModel)]='tema.descricao' type="text" class="form-control" id="categoria"
                             placeholder="Digite a categoria do tema">
                     </div>
                     <div class="d-flex justify-content-center mt-2">
@@ -45,7 +45,7 @@
                     <tbody>
                         <tr *ngFor="let item of listaTema">
                             <th>{{item.id}}</th>
-                            <td>{{item.categoria}}</td>
+                            <td>{{item.descricao}}</td>
                             <td class="d-flex justify-content-end">
                                 <button class="btn btnE-color bgE-color mr-3">Editar</button>
                                 <button class="btn btnO-color bgO-color">Apagar</button>
