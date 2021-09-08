@@ -1,0 +1,61 @@
+<div class="container-fluid fundo-tema" >
+    <div class="row bgdient">
+        <div class="col-md-12 text-white">
+
+            <a routerLink='/inicio' class="text-white text-left">
+                <i class="fa fa-home fs-16" aria-hidden="true"></i>inicio
+            </a>
+            <h1 class="fs-54 text-center">Tema</h1>
+            <h5 class="fs-18 text-center">Veja todos os temas cadastrados ou cadastre um Novo:</h5>
+            <div class="row d-flex justify-content-center mt-5 mb-5">
+                <div class="col-md-3">
+
+                    <div class="form-goup">
+                        <input [(ngModel)]='tema.categoria' type="text" class="form-control" id="categoria"
+                            placeholder="Digite a categoria do tema">
+                    </div>
+                    <div class="d-flex justify-content-center mt-2">
+                        <button class="btn btna-color bga-color" (click)='cadastrar()'>Cadastrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container fundoForms">
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <h2 class="text-center">Todos os temas</h2>
+        </div>
+    </div>
+    <div class="row mt-3 mb-5 d-flex justify-content-center">
+        <div class="col-md-6">
+            <table class="table table-hover">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Primerio</th>
+                            <th scope="col" class="text-right">Modificações</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of listaTema">
+                            <th>{{item.id}}</th>
+                            <td>{{item.categoria}}</td>
+                            <td class="d-flex justify-content-end">
+                                <button class="btn btnE-color bgE-color mr-3">Editar</button>
+                                <button class="btn btnO-color bgO-color">Apagar</button>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+                </table>
+            </table>
+        </div>
+    </div>
+</div>

@@ -12,6 +12,7 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule, HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { TemaComponent } from './tema/tema.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CommonModule, HashLocationStrategy, LocationStrategy } from '@angular/c
     RodapeComponent,
     ContatosComponent,
     EntrarComponent,
-    CadastrarComponent
+    CadastrarComponent,
+    TemaComponent
   ],
   imports: [
     BrowserModule,
