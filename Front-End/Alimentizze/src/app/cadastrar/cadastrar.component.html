@@ -12,21 +12,32 @@
                         Cadastro
                     </h1>
 
+
+                   <!--  <div class="form-group">
+                        <label for="tipo">Tipo de Usuário</label>
+                        <select class="form-control" name="tipo" id="tipo" (change)="tipoUser($event)">
+                            <option>Selecione um tipo de usuário</option>
+                            <option value="Ong">ONG</option>
+                            <option value="colaboradore">COLABORADORE</option>
+
+                        </select>
+                    </div> -->
+
                     <div class="fw-bold mxr-150 zulSelect text-center">
 
                         
                         <label class="mxr-150">
-                            <input type="radio" name="options" (click)="selecionarRadio('ong')">
+                            <input [(ngModel)]="usuario.tipoDeUsuario" type="radio" name="options" (click)="selecionarRadio('ong')" (change)="tipoUser($event)" >
                             ONG
                             
                         </label>
                         <label>
-                            <input type="radio" name="options" (click)="selecionarRadio('colaboradore')">
+                            <input [(ngModel)]="usuario.tipoDeUsuario" type="radio" name="options" (click)="selecionarRadio('colaboradore')" (change)="tipoUser($event)">
                             COLABORADORE
                             
-                        </label>
+                        </label> 
 
-                    </div>
+                    </div> 
 
                     <br>
 

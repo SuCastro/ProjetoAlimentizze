@@ -36,6 +36,11 @@ export class MenuComponent implements OnInit {
   
   
   }
+
+  sobreNos(){
+    this.router.navigate(['/sobre-nos'])
+  
+  }
 }
 
 
