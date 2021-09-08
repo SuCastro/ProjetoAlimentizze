@@ -37,18 +37,20 @@ entrar(){
     console.log(JSON.stringify(this.usuarioDTO))
 
     this.usuarioDTO = resp
-
+    console.log("~resp foto"+resp.foto)
     environment.token = this.usuarioDTO.token
     environment.nomeCompleto = this.usuarioDTO.nomeCompleto
-    environment.foto = this.usuarioDTO.foto
+    environment.foto = resp.foto
     environment.id = this.usuarioDTO.id
     environment.email = this.usuarioDTO.email
+    environment.tipoDeUsuario = this.usuarioDTO.tipoDeUsuario
 
     console.log(environment.token)
     console.log(environment.nomeCompleto)
     console.log(environment.foto)
     console.log(environment.id)
     console.log(environment.email)
+    console.log(environment.tipoDeUsuario)
 
     this.router.navigate(["/home"])
 

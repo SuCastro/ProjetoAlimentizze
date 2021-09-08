@@ -27,12 +27,12 @@
 
                         
                         <label class="mxr-150">
-                            <input [(ngModel)]="usuario.tipoDeUsuario" type="radio" name="options" (click)="selecionarRadio('ong')" (change)="tipoUser($event)" >
+                            <input  type="radio" name="options" (click)="selecionarRadio('ong')">
                             ONG
                             
                         </label>
                         <label>
-                            <input [(ngModel)]="usuario.tipoDeUsuario" type="radio" name="options" (click)="selecionarRadio('colaboradore')" (change)="tipoUser($event)">
+                            <input [(ngModel)]="usuario.tipoDeUsuario" type="radio" name="options" (click)="selecionarRadio('colaboradore')" >
                             COLABORADORE
                             
                         </label> 
@@ -55,7 +55,7 @@
 
                     <div class="form-group">
                         
-                        <input [(ngModel)]="usuario.foto" class="form-control radio fundoVerdinClarin fw-bold al" type="text" name="foto" id="foto"
+                        <input [(ngModel)]="usuario.foto"class="form-control radio fundoVerdinClarin fw-bold al" type="text" name="foto" id="foto"
                             placeholder="Link da sua foto:">
                     </div>
 
