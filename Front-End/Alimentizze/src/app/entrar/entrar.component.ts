@@ -56,6 +56,9 @@ entrar(){
     if(erro.status == 500){
       alert("Usuário ou senha estão incorretos!")
     }
+    if(erro.status == 400){
+      alert("Usuário ou senha estão incorretos!")
+    }
   })
 } 
 

@@ -89,22 +89,21 @@
                                         src="https://cdn-icons-png.flaticon.com/512/4838/4838421.png" alt=""> Conta</a>
                                 <a class="dropdown-item img-fluid " href=""><img width="30px" height="34px"
                                         src="../../assets/img/icones/do-utilizador (1).png" alt=""> Editar perfil</a>
-                                <a class="dropdown-item" href=""> <img width="30px" height="34px"
-                                        src="https://img-premium.flaticon.com/png/512/3225/premium/3225632.png?token=exp=1630990883~hmac=29d1e3d7641964048593980df854f7af"
-                                        alt=""> Configurações</a>
+                                <a class="dropdown-item" href="">
+                                    <img src="../../assets/img/icones/configIcon.jpg" width="30px" height="34px" alt=""> Configurações</a>
                                 <div class="dropdown-divider d-flex justify-content-start "></div>
-                                <a class="dropdown-item " href="">
+                                <a routerLink='/sobre-nos' class="dropdown-item " href="">
 
-                                    <img src="https://img-premium.flaticon.com/png/512/3822/premium/3822850.png?token=exp=1630991175~hmac=43011eec7c269a769179272d0341c803"
+                                    <img src="../../assets/img/imagens/alimentizze logo.jpeg"
                                         alt="" width="30px" height="34px" class="img-fluid rounded-circle "
-                                        routerLink='/sobre-nos'> Sobre nós </a>
+                                        > Sobre nós </a>
 
                                 <a class="dropdown-item" href="" routerLink='/contatos'> <img width="30px" height="34px"
                                         src="https://cdn-icons-png.flaticon.com/512/1034/1034131.png"
                                         alt="">Contatos</a>
 
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href=""><img width="30px" height="34px"
+                                <a (click)="sair()" class="dropdown-item" href=""><img width="30px" height="34px"
                                         src="https://cdn-icons-png.flaticon.com/512/857/857682.png" alt=""> Sair</a>
                             </div>
                         </li>
