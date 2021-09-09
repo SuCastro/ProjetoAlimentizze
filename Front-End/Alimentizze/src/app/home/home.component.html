@@ -204,13 +204,13 @@
 
               <div class="col-md-2 d-flex justify-content-start ">
                 <img
-                  src="link foto do usuario"
+                  src="{{postagem.usuario.foto}}"
                   alt="foto ong" width="70px" height="70px" class="img-fluid rounded-circle">
 
               </div>
 
               <div class="col-md-10 d-flex justify-content-start  d-flex align-items-center">
-                <h5 class="">Nome do Usuario que fez o post</h5>
+                <h5 class="">{{postagem.usuario.nomeCompleto}}</h5>
               </div>
 
             </div>
@@ -222,7 +222,7 @@
 
                 <label for="tema"></label><br>
                 <label for="titulo"></label><br>
-                <div class="w-100 bg-white" style="border-radius: 25px;" > <p class="ml-2">{{postagem.tema}}</p></div>
+                <div class="w-100 bg-white" style="border-radius: 25px;" > <p class="ml-2">{{postagem.tema.categoria}}</p></div>
                 <br>
 
                 <label for="titulo"></label><br>

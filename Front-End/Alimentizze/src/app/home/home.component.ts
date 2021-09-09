@@ -57,6 +57,7 @@ this.tipo = environment.tipoDeUsuario
     }
     console.log("~foto "+this.foto)
     console.log("~tipo "+this.tipo)
+    this.getAllPostagens()
   }
 
   getAllTemas() {
@@ -77,11 +78,12 @@ this.tipo = environment.tipoDeUsuario
   }
 
   publicar() {
-    this.tema.id = this.idTema
+    this.tema.id = 1;
     this.postagem.tema = this.tema
 
     this.usuario.id = this.idUsuario
     this.postagem.usuario = this.usuario
+    console.log("postagem "+this.postagem)
 
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
