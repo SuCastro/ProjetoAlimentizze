@@ -11,11 +11,58 @@ import com.PI_Alimentizze.Alimentizze.repositorio.UsuarioRepositorio;
 import org.apache.commons.codec.binary.Base64;
 
 
+
 @Service
 public class UsuarioServico {
 
 	@Autowired 
      private UsuarioRepositorio repositorio;
+	
+	
+	
+	
+	
+	
+	public Usuario Cadastrar(Usuario usuario) {
+		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+
+		String senhaEncoder = encoder.encode(usuario.getSenha());
+		usuario.setSenha(senhaEncoder);
+
+		return repositorio.save(usuario);
+	}
+
+	public Optional<UsuarioDTO> Logar(Optional<UsuarioDTO> user) {
+
+		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+		Optional<Usuario> usuario = repositorio.findByEmail(user.get().getEmail());
+
+		if (usuario.isPresent()) {
+			if (encoder.matches(user.get().getSenha(), usuario.get().getSenha())) {
+
+				String auth = user.get().getEmail() + ":" + user.get().getSenha();
+				byte[] encodedAuth = Base64.encodeBase64(auth.getBytes(Charset.forName("US-ASCII")));
+				String authHeader = "Basic " + new String(encodedAuth);
+
+				user.get().setToken(authHeader);			
+				user.get().setId(usuario.get().getId());
+				user.get().setNomeCompleto(usuario.get().getNomeCompleto());
+				user.get().setFoto(usuario.get().getFoto());
+				user.get().setTipoDeUsuario(usuario.get().getTipoDeUsuario());
+				
+				return user;
+
+			}
+		}
+		return null;
+	}
+	
+	
+	
+	
+	
+	
+	
 	
 	/**
 	 * Método utilizado para cadastrar um usuario no banco de dados, o mesmo é
@@ -27,7 +74,7 @@ public class UsuarioServico {
 	 * @author Projeto Alimentizze
 	 */
 	
-	public Optional<Object> cadastrarUsuario(Usuario novoUsuario) {
+	/*public Optional<Object> cadastrarUsuario(Usuario novoUsuario) {
 		return repositorio.findByEmail(novoUsuario.getEmail()).map(usuarioExistente -> {
 			return Optional.empty();
 		}).orElseGet(() -> {
@@ -51,12 +98,13 @@ public class UsuarioServico {
 				usuarioParaAutenticar.setId(usuarioExistente.getId());
 				usuarioParaAutenticar.setNomeCompleto(usuarioExistente.getNomeCompleto());
 				usuarioParaAutenticar.setTipoDeUsuario(usuarioExistente.getTipoDeUsuario());
+				usuarioParaAutenticar.setFoto(usuarioExistente.getFoto());
 				usuarioParaAutenticar.setSenha(usuarioExistente.getSenha());
 				return Optional.ofNullable(usuarioParaAutenticar);
 			} else {
 				return Optional.empty();}
 		});
 	
-		}
+		}*/
 }
 

@@ -24,6 +24,8 @@ public interface UsuarioRepositorio extends JpaRepository<Usuario, Long>{
 	public Optional<Usuario> findByEmail (String email);
 	
 	
+	public Optional<Usuario> findByEmailAndSenha(String email, String senha);
+	
 	/** * Metodo utilizado para pesquisar coluna nomeCompleto da tabela Usuario
 	 * 
 	 * @param nomeCompleto

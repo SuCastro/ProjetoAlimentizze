@@ -1,9 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import { Postagem } from '../modelo/Postagem';
+import { Tema } from '../modelo/Tema';
 import { Usuario } from '../modelo/Usuario';
 
 import { AuthService } from '../service/auth.service';
+import { PostagemService } from '../service/postagem.service';
+import { TemaService } from '../service/tema.service';
 
 
 @Component({
@@ -12,7 +16,19 @@ import { AuthService } from '../service/auth.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+
+  postagem: Postagem = new Postagem()
+  listaPostagens: Postagem[]
+  tituloPost: string
+
+  tema: Tema = new Tema()
+  listaTemas: Tema[]
+  idTema: number
+  nomeTema: string
+
+
   usuario: Usuario = new Usuario()
+  idUsuario = environment.id
 
   nome = environment.nomeCompleto
   foto = environment.foto
@@ -24,7 +40,9 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private auth: AuthService,
-    private router: Router
+    private router: Router,
+    private postagemService: PostagemService,
+    private temaService: TemaService
 
   
 
@@ -41,6 +59,47 @@ this.tipo = environment.tipoDeUsuario
     console.log("~tipo "+this.tipo)
   }
 
+  getAllTemas() {
+    this.temaService.getAllTema().subscribe((resp: Tema[]) => {
+      this.listaTemas = resp
+
+    })
+
   
+  }
+
+  getAllPostagens() {
+    this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) => {
+      this.listaPostagens = resp
+      console.log("~lista postagem "+JSON.stringify(this.listaPostagens))
+    })
+
+  }
+
+  publicar() {
+    this.tema.id = this.idTema
+    this.postagem.tema = this.tema
+
+    this.usuario.id = this.idUsuario
+    this.postagem.usuario = this.usuario
+
+    this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
+      this.postagem = resp
+      alert("Postagem realizada com sucesso!")
+      this.postagem = new Postagem()
+      this.getAllPostagens()
+
+    })
+
+
+  }
+
+
+
+
+
+
+
+
 
 }

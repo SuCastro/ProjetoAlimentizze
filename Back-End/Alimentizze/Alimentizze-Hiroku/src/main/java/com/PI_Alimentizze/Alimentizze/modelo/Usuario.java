@@ -48,22 +48,7 @@ public class Usuario
 	private List<Postagem> minhasPostagens = new ArrayList<>();
 
 
-	public Usuario() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
-
-	public Usuario(Long id, String nomeCompleto, String email,String senha, String tipoDeUsuario) {
-		super();
-		this.id = id;
-		this.nomeCompleto = nomeCompleto;
-		this.email = email;
-		this.senha = senha;
-		this.tipoDeUsuario = tipoDeUsuario;
-	}
-
-
+	
 	public Long getId()
 	{
 		return id;

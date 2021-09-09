@@ -1,12 +1,12 @@
 package com.PI_Alimentizze.Alimentizze.controle;
 
 import java.util.List;
-import java.util.Optional;
+//import java.util.Optional;
 
-import javax.validation.Valid;
+//import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -20,18 +20,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.PI_Alimentizze.Alimentizze.modelo.Postagem;
 import com.PI_Alimentizze.Alimentizze.repositorio.PostagemRepositorio;
-import com.PI_Alimentizze.Alimentizze.servico.PostagemServico;
+
 
 	@RestController
-	@RequestMapping("/Postagem")
-	@CrossOrigin("*")
+	@RequestMapping("/postagem")
+	@CrossOrigin(origins = "*", allowedHeaders = "*")
 	public class PostagemControle {
 
 		@Autowired
 		private PostagemRepositorio repository;
 
-		@Autowired
-		private PostagemServico servicos;
+		
 
 			
 		@GetMapping
@@ -51,12 +50,12 @@ import com.PI_Alimentizze.Alimentizze.servico.PostagemServico;
 		}
 		
 		
-		/*  Antigo metodo Post /@PostMapping
+		@PostMapping
 		public ResponseEntity<Postagem> post(@RequestBody Postagem titulo) {
 			return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(titulo));
-		}*/
+		}
 		
-		@PostMapping("/salvar")
+		/* @PostMapping("/salvar")
 		public ResponseEntity<Object> cadastrarPostagem(@Valid @RequestBody Postagem novaPostagem) {
 			Optional<?> objetoCadastrado = servicos.cadastrarPostagem(novaPostagem);
 
@@ -66,17 +65,20 @@ import com.PI_Alimentizze.Alimentizze.servico.PostagemServico;
 				return ResponseEntity.status(400).build();
 			}
 
+		} */ 
+		
+		
+		
+		@PutMapping
+		public ResponseEntity<Postagem> put (@RequestBody Postagem postagem){
+			return ResponseEntity.status(HttpStatus.OK).body(repository.save(postagem));
 		}
 
 		
 
-		/*  Antigo metodo PutMapping/@PutMapping 
-		public ResponseEntity<Postagem> put(@RequestBody Postagem titulo){
-			return ResponseEntity.status(HttpStatus.OK).body(repository.save(titulo));
-			
-		}*/
 		
-		@PutMapping("/alterar")
+		
+		/* @PutMapping("/alterar")
 		public ResponseEntity<Object> alterar(@Valid @RequestBody Postagem postagemParaAlterar) {
 			Optional<Postagem> objetoAlterado = servicos.alterarPostagem(postagemParaAlterar);
 
@@ -85,15 +87,17 @@ import com.PI_Alimentizze.Alimentizze.servico.PostagemServico;
 			} else {
 				return ResponseEntity.status(400).build();
 			}
-		}
-
-
-		/* Delete void /@DeleteMapping("/{id}")
-		public void delete(@PathVariable Long id) {
-			repository.deleteById(id);
-		}*/
+		} */
 		
-		@DeleteMapping("/deletar/{id}")
+		
+		@DeleteMapping("/{id}")
+		public void delete(@PathVariable long id) {
+			repository.deleteById(id);
+		}	
+
+
+		 
+		 /* @DeleteMapping("/deletar/{id}")
 		public ResponseEntity<Object> deletarPorId(@PathVariable(value = "id") Long id) {
 			Optional<Postagem> objetoExistente = repository.findById(id);
 			if (objetoExistente.isPresent()) {
@@ -103,7 +107,7 @@ import com.PI_Alimentizze.Alimentizze.servico.PostagemServico;
 				return ResponseEntity.status(400).build();
 			}
 
-		}
+		}*/
 
 		
 		
