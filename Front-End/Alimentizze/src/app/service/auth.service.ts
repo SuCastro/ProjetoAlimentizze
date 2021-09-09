@@ -23,14 +23,14 @@ export class AuthService {
 
 
   entrar(usuarioDTO: UsuarioDTO): Observable<UsuarioDTO>{
-    return this.http.put<UsuarioDTO>('https://projetoalimentizze.herokuapp.com/usuario/autenticar',usuarioDTO)
+    return this.http.post<UsuarioDTO>('https://projetoalimentizze.herokuapp.com/usuario/logar',usuarioDTO)
 
 
   }
 
 
   cadastrar(usuario: Usuario): Observable<Usuario>{
-    return this.http.post<Usuario>('https://projetoalimentizze.herokuapp.com/usuario/salvar',usuario)
+    return this.http.post<Usuario>('https://projetoalimentizze.herokuapp.com/usuario/cadastrar',usuario)
 
   }
 

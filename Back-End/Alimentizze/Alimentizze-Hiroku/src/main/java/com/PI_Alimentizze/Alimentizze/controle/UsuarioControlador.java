@@ -3,16 +3,18 @@ package com.PI_Alimentizze.Alimentizze.controle;
 import java.util.List;
 import java.util.Optional;
 
-import javax.validation.Valid;
+//import javax.validation.Valid;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
+//import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -35,20 +37,34 @@ public class UsuarioControlador {
 
 		@Autowired
 		private UsuarioServico servicos;
-
-		@PostMapping("/salvar")
-		public ResponseEntity<Object> cadastrarUsuario(@Valid @RequestBody Usuario novoUsuario) {
-			Optional<Object> objetoCadastrado = servicos.cadastrarUsuario(novoUsuario);
-
-			if (objetoCadastrado.isPresent()) {
-				return ResponseEntity.status(201).body(objetoCadastrado.get());
-			} else {
-				return ResponseEntity.status(400).build();
-			}
-
+		
+		
+		
+		
+		@PostMapping("/logar") 
+		public ResponseEntity<UsuarioDTO> Autentication(@RequestBody Optional<UsuarioDTO> user){
+			return servicos.Logar(user).map(resp -> ResponseEntity.ok(resp))
+					.orElse(ResponseEntity.status(HttpStatus.UNAUTHORIZED).build());
 		}
 		
-		@PutMapping("/autenticar")
+		
+
+		
+		
+		
+		@PostMapping("/cadastrar")	
+		public ResponseEntity<Usuario> Post(@RequestBody Usuario usuario){
+			return ResponseEntity.status(HttpStatus.CREATED)
+					.body(servicos.Cadastrar(usuario));
+		}
+		
+		
+		
+		
+		
+		
+		
+		/*@PutMapping("/autenticar")
 		public ResponseEntity<Object> pegarCredenciais(@Valid @RequestBody UsuarioDTO loginSenha) {
 			Optional<?> objetoCredenciado = servicos.pegarCredenciais(loginSenha);
 
@@ -58,8 +74,16 @@ public class UsuarioControlador {
 				return ResponseEntity.status(400).build();
 			}
 			
+		}*/ 
+		
+		
+		@GetMapping
+		public ResponseEntity<List<Usuario>> GetAll() {
+			return ResponseEntity.ok(repositorio.findAll());
 		}
-		@GetMapping("/todes")
+		
+		
+		/*@GetMapping("/todes")
 		public ResponseEntity<Object> buscarTodes() {
 			List<Usuario> listaUsuarios = repositorio.findAll();
 			
@@ -69,7 +93,7 @@ public class UsuarioControlador {
 				return ResponseEntity.status(200).body(listaUsuarios);
 			}
 			
-		}
+		} */
 
 		@GetMapping("/{id}")
 		public ResponseEntity<Usuario> buscarPorId(@PathVariable(value = "id") Long id) {
