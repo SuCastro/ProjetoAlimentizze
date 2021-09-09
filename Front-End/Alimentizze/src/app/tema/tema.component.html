@@ -47,8 +47,8 @@
                             <th>{{item.id}}</th>
                             <td>{{item.categoria}}</td>
                             <td class="d-flex justify-content-end">
-                                <button class="btn btnE-color bgE-color mr-3">Editar</button>
-                                <button class="btn btnO-color bgO-color">Apagar</button>
+                                <button  class="btn btnE-color bgE-color mr-3" [routerLink]="['/tema-edit',item.id]">Editar</button>
+                                <button class="btn btnO-color bgO-color" [routerLink]="['/tema-delete',item.id]"  >Apagar</button>
                             </td>
 
                         </tr>

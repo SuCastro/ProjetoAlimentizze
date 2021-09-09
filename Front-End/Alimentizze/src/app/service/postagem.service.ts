@@ -18,10 +18,22 @@ export class PostagemService {
   getAllPostagens(): Observable<Postagem[]>{
     return this.http.get<Postagem[]>("https://projetoalimentizze.herokuapp.com/postagem")
   }
+  getByIdPostagem(id: number): Observable<Postagem>{
+    return this.http.get<Postagem>(`https://projetoalimentizze.herokuapp.com/postagem/${id}`)
+  }
 
-
+  getByTituloPostagem(titulo: string): Observable<Postagem[]>{
+    return this.http.get<Postagem[]>(`https://projetoalimentizze.herokuapp.com/postagem/titulo/${titulo}`)
+  }
+  
   postPostagem(postagem: Postagem): Observable<Postagem>{
     return this.http.post<Postagem>("https://projetoalimentizze.herokuapp.com/postagem", postagem)
   }
+
+putPostagem(postagem: Postagem): Observable<Postagem>{
+    return this.http.put<Postagem>('https://projetoalimentizze.herokuapp.com/postagem', postagem)
+  }
+ 
+
 
 }
