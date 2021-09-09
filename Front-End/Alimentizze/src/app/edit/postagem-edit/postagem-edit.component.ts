@@ -57,13 +57,14 @@ export class PostagemEditComponent implements OnInit {
   }
 
   atualizar(){
-    this.tema.id = this.idTema
+ this.tema.id = this.idTema;
+   
     this.postagem.tema = this.tema
-
+    console.log("postagem "+JSON.stringify(this.postagem))
     this.postagemService.putPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
       alert('Postagem atualizada com sucesso!')
-      this.router.navigate(['/inicio'])
+      this.router.navigate(['/home'])
     })
   }
 

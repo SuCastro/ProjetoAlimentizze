@@ -40,7 +40,8 @@
             <a href="" class="list-group-item list-group-item-action text-center">
               Destaque
             </a>
-            <a href="" class="list-group-item list-group-item-action">Minhas Postagens</a>
+            <a href="" class="list-group-item list-group-item-action"
+            routerLink= '/minhas-postagens'>Minhas Postagens</a>
             <a href="" class="list-group-item list-group-item-action">Meus Grupos</a>
             <a href="" class="list-group-item list-group-item-action">Minhas Campanhas em andamentos</a>
             <a href="" class="list-group-item list-group-item-action ">Minhas ações solidarias</a>
@@ -90,8 +91,14 @@
 
                   <form>
 
-                    <label for="tema"></label><br>
-                    <input [(ngModel)]="postagem.tema" [ngModelOptions]="{standalone: true}" class="radio w-100" type="text" id="tema" placeholder="     Tema"><br>
+                    <div class="form-group">
+                      <label for="tema">Escolha um tema</label>
+                      <select name="tema" id="tema" class="form-control" [(ngModel)]="idTema" [(ngModel)]="postagem.tema" [ngModelOptions]="{standalone: true}" (change)="findByIdTema()">
+                        <option *ngFor="let item of listaTemas" value="{{item.id}}">{{item.categoria}}</option>
+                      </select>
+                    </div>
+            
+
 
                     <label for="titulo"></label><br>
                     <input [(ngModel)]="postagem.titulo" [ngModelOptions]="{standalone: true}" class="radio w-100" type="text" id="titulo" placeholder="     Titulo"><br>
