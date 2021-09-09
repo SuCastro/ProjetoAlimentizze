@@ -58,6 +58,8 @@ this.tipo = environment.tipoDeUsuario
     console.log("~foto "+this.foto)
     console.log("~tipo "+this.tipo)
     this.getAllPostagens()
+    this.getAllTemas()
+
   }
 
   getAllTemas() {
@@ -66,8 +68,19 @@ this.tipo = environment.tipoDeUsuario
 
     })
 
+    
   
   }
+
+  findByIdTema() {
+    this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema) => {
+      this.tema = resp
+      
+
+    })
+
+  }
+
 
   getAllPostagens() {
     this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) => {
@@ -78,13 +91,13 @@ this.tipo = environment.tipoDeUsuario
   }
 
   publicar() {
-    this.tema.id = 1;
+    this.tema.id = this.idTema
     this.postagem.tema = this.tema
 
     this.usuario.id = this.idUsuario
     this.postagem.usuario = this.usuario
-    console.log("postagem "+this.postagem)
-
+    console.log("a ser cadastrada postagem "+JSON.stringify(this.postagem))
+    console.log("tema "+JSON.stringify(this.tema))
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
       alert("Postagem realizada com sucesso!")

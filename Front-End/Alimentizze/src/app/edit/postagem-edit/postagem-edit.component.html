@@ -9,24 +9,28 @@
     <div class="row d-flex justify-content-center">
       <div class="col-md-6">
   
-        <form>
+      
 
-          <label for="tema"></label><br>
-          <input [(ngModel)]="postagem.tema" [ngModelOptions]="{standalone: true}" class="radio w-100" type="text" id="tema" placeholder="     Tema"><br>
+          <div class="form-group">
+            <label for="tema">Escolha um tema</label>
+            <select name="tema" id="tema" class="form-control" [(ngModel)]="idTema" [(ngModel)]="postagem.tema" [ngModelOptions]="{standalone: true}" (change)="findByIdTema()">
+              <option *ngFor="let item of listaTemas" value="{{item.id}}">{{item.categoria}}</option>
+            </select>
+          </div>
 
           <label for="titulo"></label><br>
-          <input [(ngModel)]="postagem.titulo" [ngModelOptions]="{standalone: true}" class="radio w-100" type="text" id="titulo" placeholder="     Titulo"><br>
+          <input [(ngModel)]="postagem.titulo"  class="radio w-100" type="text" id="titulo" placeholder="     Titulo"><br>
 
 
           <div class="radio">
             <label for="descricao"></label><br>
-            <textarea [(ngModel)]="postagem.descricao" [ngModelOptions]="{standalone: true}" class="radio w-100 " name="descricao" id="descricao" cols="40" rows="5"
+            <textarea [(ngModel)]="postagem.descricao" class="radio w-100 " name="descricao" id="descricao" cols="40" rows="5"
               placeholder="     Descrição"></textarea>
           </div>
 
           <div>
             <label for="link"></label> <br>
-            <input [(ngModel)]="postagem.link"  [ngModelOptions]="{standalone: true}" class="radio w-100" type="text" id="link" placeholder="     Link da ONG">
+            <input [(ngModel)]="postagem.link"   class="radio w-100" type="text" id="link" placeholder="     Link da ONG">
           </div>
 
 
@@ -39,7 +43,7 @@
               <div class="row d-flex justify-content-start">
 
                 <label for="dataPostagem"></label>
-                <input [(ngModel)]="postagem.dataPostagem" [ngModelOptions]="{standalone: true}" class="radio w-75  " type="text" id="dataPostagem" placeholder="Data da Postagem">
+                <input [(ngModel)]="postagem.dataPostagem" class="radio w-75  " type="text" id="dataPostagem" placeholder="Data da Postagem">
 
               </div>
             </div>
@@ -48,7 +52,7 @@
               <div class="row d-flex justify-content-end">
 
                 <label for="dataExpiração"></label>
-                <input [(ngModel)]="postagem.dataExpiracao"  [ngModelOptions]="{standalone: true}" class="radio w-75   " type="text" id="dataExpiracao" placeholder="Data Expiração">
+                <input [(ngModel)]="postagem.dataExpiracao"  class="radio w-75   " type="text" id="dataExpiracao" placeholder="Data Expiração">
 
               </div>
 
@@ -60,18 +64,13 @@
 
 
 
-
-
-          
-
-
             <br>
           
 
-        </form>
+      
     
           <div class="d-flex justify-content-center">
-            <button class="btn btn-danger mr-4" routerLink='/inicio'>Cancelar</button>
+            <button class="btn btn-danger mr-4" routerLink='/home'>Cancelar</button>
             <button class="btn btn-success" (click)='atualizar()'>Atualizar</button>
           </div>
     
