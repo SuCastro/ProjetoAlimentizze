@@ -1,3 +1,56 @@
 .fundo-contatos{
     background-color: #10501C;
 }
+.radio{
+
+  border-radius: 35px 35px
+}
+.radios{
+  border-radius: 25px 25px 
+
+}
+.lar{
+
+  background-color: #FF914D;
+}
+.zul{
+  
+   background-color:  #00C2CB;
+}
+
+.zulSelect{
+
+  
+   color:#00C2CB;
+}
+
+
+.a{
+
+  color:#0F501D;
+}
+
+.fundoVerdinClarin{
+
+  background-color: #CAEDBA;
+
+}
+
+.al{
+
+ width:"00px" ;
+ height:"00px";
+
+}
+
+.fundoForms{
+
+  background-color: #DCF1D3;
+}
+.Tm{
+
+  width:"100px" ;
+ 
+ 
+ }
+
