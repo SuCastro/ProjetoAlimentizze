@@ -34,7 +34,7 @@ putPostagem(postagem: Postagem): Observable<Postagem>{
     return this.http.put<Postagem>('https://projetoalimentizze.herokuapp.com/postagem', postagem)
   }
   deletePostagem(id: number){
-    return this.http.delete(`https://projetoalimentizze.herokuapp.com/postagem/${id}`, this.token)
+    return this.http.delete(`https://projetoalimentizze.herokuapp.com/postagem/${id}`)
   }
 
 
