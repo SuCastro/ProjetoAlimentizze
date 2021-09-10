@@ -5,3 +5,16 @@
 .fundoForms{
     background-color: #DCF1D3;
  }
+
+
+
+ .btna-color{
+   color: #0F501D;
+  background-color: #CAEDBA;;
+ } 
+ 
+ .bga-color:hover{
+   color: #CAEDBA;
+  background-color: #0F501D;
+ }
+ 
