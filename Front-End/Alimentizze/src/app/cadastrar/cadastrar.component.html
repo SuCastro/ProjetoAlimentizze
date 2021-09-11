@@ -1,15 +1,15 @@
-<div class="container-fluid css-selector ">
-    <div class="row">
+<div class="container-fluid css-selector w-100 ">
+    <div class="row d-flex align-items-center ">
         <div class="col-md-6">
             <img src="../../assets/img/icones/Alimentizze (1).png" alt="Logo alimentize" width="625px" height="625px">
             
 
         </div>
 
-        <div class="col-md-5 mt-3 mb-1 fundoForms radio">
-            <div class="row d-flex justify-content-center">
-                <div class="col-md-10">
-                    <h1 class="text-center al mt-3">
+        <div class="col-md-4 mt-3 fundoForms radio ">
+            <div class="row justify-content-center">
+                <div class="col-md-10 ">
+                    <h1 class="text-center al mt-3 mb-3">
                         Cadastro
                     </h1>
 
@@ -24,7 +24,7 @@
                         </select>
                     </div> -->
 
-                    <div class="fw-bold mxr-150 zulSelect text-center">
+                    <div class="fw-bold mxr-150 al text-center">
 
                         
                         <label class="mxr-150">
@@ -45,7 +45,7 @@
                     <div class="form-group">
                        
                         <input [(ngModel)]="usuario.nomeCompleto" class="form-control radio fundoVerdinClarin fw-bold al" type="text"
-                            name="nomeCompleto" id="nomeCompleto" placeholder="Nome completo:">
+                            name="nomeCompleto" id="nomeCompleto" placeholder="Nome completo: ">
                     </div>
 
                     <div class="form-group">
@@ -74,7 +74,7 @@
 
                     <br>
 
-                    <div class="d-flex justify-content-center">
+                    <div class="d-flex justify-content-center mb-4">
                         <button type="submit" class="btn lar mxr-7 radio fw-bold text-white" routerLink='/entrar'>Cancelar</button>
                         <button type="submit" class="btn zul radio fw-bold text-white" (click)="cadastrar()">Cadastrar</button>
                     </div>

@@ -50,12 +50,13 @@
 }
 
 .fundoForms{
+  background: rgb(126,217,87);
+  background: linear-gradient(90deg, rgba(126,217,87,1) 52%, rgba(90,132,98,1) 96%);
 
-  background-color: #DCF1D3;
 }
 
 .css-selector {
-  background: linear-gradient(214deg, #13531c, #418f34, #7ed859);
+  background: linear-gradient(214deg, #103813, #0F501D, #7ed859);
   background-size: 600% 600%;
 
   -webkit-animation: AnimationName 8s ease infinite;
