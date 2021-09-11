@@ -1,48 +1,54 @@
-<div class="container-fluid fundo-contatos w-100">
+<div class="container-fluid css-selector w-100 ">
+    <div class="row d-flex align-items-center ">
+        <div class="col-md-6">
 
+            <img src="../../assets/img/icones/Alimentizze (1).png" alt="Logo alimentize" width="625px" height="625px">
 
-    <div class="row d-flex align-items-center">
-    
-        <div class="col-md-6 d-flex justify-content-center">
-      
-                <img src="../../assets/img/icones/Alimentizze logo.png" alt="">
-    
         </div>
-    
-    
-        <div class="col-md-4 radiotext-white justify-content-center al ">
-        
-            <div class="row d-flex justify-content-center d-flex align-items-center">
-                <div class=" radios fundoForms mt-3 ">
+
+        <div class="col-md-4 mt-3 fundoForms radio ">
+            <div class="row justify-content-center">
+                <div class="col-md-10 ">
+                    <h1 class="text-center al mt-3 mb-3">
+                       Entre em Contato
+                    </h1>
+
+
+                    <br>
+
+                    <div class="form-group">
+                       
+                        <input class="form-control radio fundoVerdinClarin fw-bold al" type="text"
+                            name="nomeCompleto" id="nomeCompleto" placeholder="Nome completo: ">
+                    </div>
+
+                    <div class="form-group">
+                        
+                        <input class="form-control radio fundoVerdinClarin fw-bold al" type="text" name="email"
+                            id="email" placeholder="Email:">
+                    </div>
+
+                    <div>
+                        <textarea class="form-control radio fundoVerdinClarin fw-bold al"  name="" 
+                        id="" cols="30" rows="10" placeholder="Assunto:"></textarea>
+                    </div>
+
                 
-                    <h4 class="text-center">Entre em Contato:</h4>
-    
-                    <form class="mb-4 justify-content-center text-center  radios  ">
-                       <label for="nome"></label> <br>
-                       <input class="radios Tm fundoVerdinClarin a" type="text"  id= "nome"placeholder="  Nome: ">
-                       <br>
-                       <br>
-                       <label for="email"></label> <br>
-                       <input class="radios fundoVerdinClarin Tm a" type="email" id="email" placeholder="  Email:">
-                       <br>
-                       <br>
-                       <label for="assunto"></label> <br>
-                       <textarea class="radios fundoVerdinClarin Tm a" name="assunto" id="assunto" cols="45" rows="10" placeholder="  Assunto: "></textarea>
-                       <br>
-                       <button class="btn btn-outline-danger " routerLink="/home">Cancelar</button>
-                       <button class="btn btn-outline-success ml-4" click="Enviar()">Enviar</button>
-                     
-                    </form>
-                 </div>
-    
+                    <br>
+
+                    <div class="d-flex justify-content-center mb-4">
+                        <button type="submit" class="btn lar mxr-7 radio fw-bold text-white" routerLink='/home'>Cancelar</button>
+                        <button type="submit" class="btn zul radio fw-bold text-white" >Enviar</button>
+                    </div>
+
+                </div>
+
             </div>
-    
-            
-            
-         </div>
+
         </div>
-    
-    
-    
-    
+
+
+
     </div>
+
+</div>

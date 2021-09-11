@@ -1,5 +1,19 @@
-.fundo-contatos{
-    background-color: #10501C;
+.al{
+
+  color:#10501C;
+}
+
+
+.mxr-150{
+  margin-right: 70px;
+}
+
+.mxr-7{
+  margin-right: 7px;
+}
+
+.fundo-cadastrar{
+  background-color: #0F501D;
 }
 .radio{
 
@@ -24,12 +38,6 @@
    color:#00C2CB;
 }
 
-
-.a{
-
-  color:#0F501D;
-}
-
 .fundoVerdinClarin{
 
   background-color: #CAEDBA;
@@ -38,19 +46,37 @@
 
 .al{
 
- width:"00px" ;
- height:"00px";
-
+  color:#0F501D;
 }
 
 .fundoForms{
+  background: rgb(126,217,87);
+  background: linear-gradient(90deg, rgba(126,217,87,1) 52%, rgba(90,132,98,1) 96%);
 
-  background-color: #DCF1D3;
 }
-.Tm{
 
-  width:"100px" ;
- 
- 
- }
+.css-selector {
+  background: linear-gradient(214deg, #103813, #0F501D, #7ed859);
+  background-size: 600% 600%;
+
+  -webkit-animation: AnimationName 8s ease infinite;
+  -moz-animation: AnimationName 8s ease infinite;
+  animation: AnimationName 8s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:50% 0%}
+  50%{background-position:51% 100%}
+  100%{background-position:50% 0%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:50% 0%}
+  50%{background-position:51% 100%}
+  100%{background-position:50% 0%}
+}
+@keyframes AnimationName {
+  0%{background-position:50% 0%}
+  50%{background-position:51% 100%}
+  100%{background-position:50% 0%}
+}
 
