@@ -6,3 +6,31 @@
     -moz-animation: AnimationName 8s ease infinite;
     animation: AnimationName 8s ease infinite;
   }
+
+  .fundoForms{
+    background: rgb(126,217,87);
+    background: linear-gradient(90deg, rgba(126,217,87,1) 52%, rgba(90,132,98,1) 96%);
+  
+  }
+
+  .radio{
+
+    border-radius: 35px 35px
+ }
+ .radios{
+    border-radius: 25px 25px 
+
+ }
+
+ .lar{
+  background-color: #FF914D;
+}
+
+.zul{
+  
+   background-color:  #00C2CB;
+}
+
+.mxr-7{
+  margin-right: 7px;
+}
