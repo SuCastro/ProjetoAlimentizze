@@ -14,24 +14,24 @@
     </div>
     
     
-    <div class="container">
+    <div class="container ">
      
-        <div class="row mt-3 mb-5 d-flex justify-content-center">
-            <div class="col-md-8">
-                <table class="table table-hover">
+        <div class="row mt-3 d-flex justify-content-center">
+            <div class="col-md-8 ">
+                <table class="table table-hover radios ">
                     <table class="table fundoForms radios ">
                         <thead>
                             <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Primerio</th>
-                                <th scope="col">Postagens</th>
-                                <th scope="col" class="text-right">Modificações</th>
+                               
+                                <th scope="col">Tema</th>
+                                <th scope="col">Título</th>
+                                <th scope="col">Modificações</th>
     
                             </tr>
                         </thead>
                         <tbody>
                             <tr *ngFor="let item of listaPostagem">
-                                <th>{{item.id}}</th>
+                                
                                 <td>{{item.titulo}}</td>
                                 <td>{{item.descricao}}</td>
                                 <td class="d-flex justify-content-end">
