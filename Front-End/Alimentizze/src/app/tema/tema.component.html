@@ -13,7 +13,7 @@
                         <div class=" form-goup d-flex justify-content-center mb-4 ">
                              
                             <div class="w-100">
-                                <input [(ngModel)]='tema.categoria' type="text" class="form-control radio" id="categoria"
+                                <input [(ngModel)]='tema.categoria' type="text" class="form-control radio fundoVerdinClarin" id="categoria"
                                 placeholder="Digite a categoria do tema" >
                             </div>
 
@@ -43,7 +43,6 @@
                     <table class="table fundoForms radios">
                         <thead>
                             <tr>
-                                <th scope="col">#</th>
                                 <th scope="col">Tema: </th>
                                 <th scope="col" class="text-right">Modificações</th>
     
@@ -51,7 +50,6 @@
                         </thead>
                         <tbody>
                             <tr *ngFor="let item of listaTema">
-                                <th>{{item.id}}</th>
                                 <td>{{item.categoria}}</td>
                                 <td class="d-flex justify-content-end mb-2">
                                     <button class="btn lar mxr-7 radio fw-bold text-white"
