@@ -3,7 +3,6 @@
 }
 .p-30{
     padding-left: 40px;
-    
 }
 .radio{
 
@@ -62,9 +61,11 @@
     transition-property: background-color;
     transition-duration: 1s;
     transition-timing-function: ease-out;
+    border-radius: 9px;
 }
 .trans:hover {
     background-color: #103813;
+    border-radius: 9px;
 }
 
 .elementos:hover{
@@ -75,3 +76,8 @@
     top: 4px;
 }
 
+.fundoVerdinClarin{
+
+    background-color: #CAEDBA;
+  
+ }
