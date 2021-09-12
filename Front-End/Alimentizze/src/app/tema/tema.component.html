@@ -1,60 +1,68 @@
-<div class="container-fluid fundo-tema" >
-    <div class="row bgdient">
-        <div class="col-md-12 text-white">
-
-            
-           
-            <h1 class="fs-54 text-center">Tema</h1>
-            <h5 class="fs-18 text-center">Veja todos os temas cadastrados ou cadastre um Novo:</h5>
-            <div class="row d-flex justify-content-center mt-5 mb-5">
-                <div class="col-md-3">
-
-                    <div class="form-goup">
-                        <input [(ngModel)]='tema.categoria' type="text" class="form-control" id="categoria"
-                            placeholder="Digite a categoria do tema">
-                    </div>
-                    <div class="d-flex justify-content-center mt-4">
-                        <button class="btn btn-outline-light btna-color bga-color" (click)='cadastrar()'>Cadastrar</button>
+<div class="css-selector">
+    <div class="container-fluid ">
+        <div class="row bgdient">
+            <div class="col-md-12 text-white">
+    
+                <h1 class="fs-54 text-center">Tema</h1>
+                <h5 class="fs-18 text-center">Veja todos os temas cadastrados ou cadastre um Novo:</h5>
+                <div class="row d-flex justify-content-center mt-5 mb-5">
+                    <div class="col-md-3">
+    
+                        <div class="form-goup">
+                            <input [(ngModel)]='tema.categoria' type="text" class="form-control" id="categoria"
+                                placeholder="Digite a categoria do tema">
+                        </div>
+                        <div class="d-flex justify-content-center mt-4">
+                            <button class="btn btn-outline-light btna-color bga-color"
+                                (click)='cadastrar()'>Cadastrar</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
-
-<div class="container fundoForms">
-    <div class="row mt-4">
-        <div class="col-md-12">
-            <h2 class="text-center">Todos os temas</h2>
+    
+    
+    <div class="container-fluid ">
+        <div class="row ">
+            <div class="col-md-12 ">
+                <h2 class="text-center text-white">Todos os temas</h2>
+            </div>
         </div>
-    </div>
-    <div class="row mt-3 mb-5 d-flex justify-content-center">
-        <div class="col-md-6">
-            <table class="table table-hover">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Primerio</th>
-                            <th scope="col" class="text-right">Modificações</th>
-
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let item of listaTema">
-                            <th>{{item.id}}</th>
-                            <td>{{item.categoria}}</td>
-                            <td class="d-flex justify-content-end">
-                                <button  class="btn btn-outline-primary mr-3" [routerLink]="['/tema-edit',item.id]">Editar</button>
-                                <button class="btn btn-outline-danger" [routerLink]="['/tema-delete',item.id]"  >Apagar</button>
-                            </td>
-
-                        </tr>
-
-                    </tbody>
+    
+        <div class="row mt-3 d-flex justify-content-center  ">
+            <div class="col-md-6 ">
+                <table class="table table-hover  ">
+                    <table class="table fundoForms ">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Tema: </th>
+                                <th scope="col" class="text-right">Modificações</th>
+    
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of listaTema">
+                                <th>{{item.id}}</th>
+                                <td>{{item.categoria}}</td>
+                                <td class="d-flex justify-content-end mb-2">
+                                    <button class="btn lar mxr-7 radio fw-bold text-white"
+                                        [routerLink]="['/tema-edit',item.id]">Editar</button>
+                                    <button class="btn zul radio fw-bold text-white"
+                                        [routerLink]="['/tema-delete',item.id]">Apagar</button>
+                                </td>
+    
+                            </tr>
+    
+                        </tbody>
+                    </table>
                 </table>
-            </table>
+            </div>
         </div>
     </div>
+
+
 </div>
+
+

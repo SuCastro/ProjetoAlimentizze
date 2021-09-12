@@ -1,3 +1,12 @@
 .rodapé-color{
     background-color: #10501C;
 }
+
+.css-selector {
+    background: linear-gradient(214deg, #103813, #0F501D, #7ed859);
+    background-size: 600% 600%;
+  
+    -webkit-animation: AnimationName 8s ease infinite;
+    -moz-animation: AnimationName 8s ease infinite;
+    animation: AnimationName 8s ease infinite;
+  }
