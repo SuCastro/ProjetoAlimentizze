@@ -1,11 +1,16 @@
-.fundo-tema{
-    background-color: #0F501D;
+  .css-selector {
+    background: linear-gradient(214deg, #103813, #0F501D, #7ed859);
+    background-size: 600% 600%;
+  
+    -webkit-animation: AnimationName 8s ease infinite;
+    -moz-animation: AnimationName 8s ease infinite;
+    animation: AnimationName 8s ease infinite;
   }
-
-.fundoForms{
-    background-color: #DCF1D3;
- }
-
+  
+  .fundoForms{
+    background: rgb(126,217,87);
+    background: linear-gradient(90deg, rgba(126,217,87,1) 52%, rgba(90,132,98,1) 96%);
+  }  
 
 
  .btna-color{
@@ -17,4 +22,24 @@
    color: #CAEDBA;
   background-color: #0F501D;
  }
- 
+
+ .lar{
+
+  background-color: #FF914D;
+}
+
+.zul{
+  
+   background-color:  #00C2CB;
+}
+
+ .al{
+
+  color:#0F501D;
+}
+
+
+.mxr-7{
+  margin-right: 7px;
+}
+
