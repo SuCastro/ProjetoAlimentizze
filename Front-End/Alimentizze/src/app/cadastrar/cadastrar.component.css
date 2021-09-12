@@ -12,9 +12,6 @@
   margin-right: 7px;
 }
 
-.fundo-cadastrar{
-  background-color: #0F501D;
-}
 .radio{
 
   border-radius: 35px 35px
@@ -23,10 +20,11 @@
   border-radius: 25px 25px 
 
 }
-.lar{
 
+.lar{
   background-color: #FF914D;
 }
+
 .zul{
   
    background-color:  #00C2CB;

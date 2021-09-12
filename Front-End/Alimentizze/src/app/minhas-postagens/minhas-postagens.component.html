@@ -1,49 +1,52 @@
-<div class="container-fluid css-selector ">
-    <div class="row ">
-        <div class="col-md-12">
-            <h1 class="fs-54 text-center"> Minhas Postagens</h1>
-            <h5 class="fs-18 text-center">Veja todos as suas Postagens:</h5>
+<div class=css-selector >
+
+
+    <div class="container-fluid text-white">
+        <div class="row ">
+            <div class="col-md-12">
+                <h1 class="fs-54 text-center"> Minhas Postagens</h1>
+                <h5 class="fs-18 text-center">Veja todos as suas Postagens:</h5>
+            </div>
+    
+    
         </div>
-
-
+    
     </div>
-
-</div>
-
-
-<div class="container fundoForms">
-    <div class="row mt-4">
-        <div class="col-md-12">
-            <h2 class="text-center">Postagens</h2>
-        </div>
-    </div>
-    <div class="row mt-3 mb-5 d-flex justify-content-center">
-        <div class="col-md-6">
-            <table class="table table-hover">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Primerio</th>
-                            <th scope="col" class="text-right">Modificações</th>
-
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let item of listaPostagem">
-                            <th>{{item.id}}</th>
-                            <td>{{item.titulo}}</td>
-                            <td>{{item.descricao}}</td>
-                            <td class="d-flex justify-content-end">
-                                <button  class="btn btnE-color bgE-color mr-3" [routerLink]="['/postagem-edit',item.id]">Editar</button>
-                                <button class="btn btnO-color bgO-color" [routerLink]="['/postagem-delete',item.id]"  >Apagar</button>
-                            </td>
-
-                        </tr>
-
-                    </tbody>
+    
+    
+    <div class="container">
+     
+        <div class="row mt-3 mb-5 d-flex justify-content-center">
+            <div class="col-md-8">
+                <table class="table table-hover">
+                    <table class="table fundoForms radios ">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Primerio</th>
+                                <th scope="col">Postagens</th>
+                                <th scope="col" class="text-right">Modificações</th>
+    
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of listaPostagem">
+                                <th>{{item.id}}</th>
+                                <td>{{item.titulo}}</td>
+                                <td>{{item.descricao}}</td>
+                                <td class="d-flex justify-content-end">
+                                    <button  class="btn lar mxr-7 radio fw-bold text-white" [routerLink]="['/postagem-edit',item.id]">Editar</button>
+                                    <button class="btn zul radio fw-bold text-white mxr-7" [routerLink]="['/postagem-delete',item.id]"  >Apagar</button>
+                                </td>
+    
+                            </tr>
+    
+                        </tbody>
+                    </table>
                 </table>
-            </table>
+            </div>
         </div>
     </div>
+
 </div>
+
