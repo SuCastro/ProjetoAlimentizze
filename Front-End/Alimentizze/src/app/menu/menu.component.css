@@ -28,36 +28,41 @@
   }
 
 .fundo-home{
-    background-color:#CAEDBA;
+    background-color:#0F501D;
 }
 
 
-.zoomIn:hover {
-    -webkit-animation-name: zoomIn;
-    animation-name: zoomIn;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    }
-    @-webkit-keyframes zoomIn {
-    0% {
-    opacity: 0;
-    -webkit-transform: scale3d(.3, .3, .3);
-    transform: scale3d(.3, .3, .3);
-    }
-    50% {
-    opacity: 1;
-    }
-    }
-    @keyframes zoomIn {
-    0% {
-    opacity: 0;
-    -webkit-transform: scale3d(.3, .3, .3);
-    transform: scale3d(.3, .3, .3);
-    }
-    50% {
-    opacity: 1;
-    }
-    } 
-  
+.css-selector {
+    background: linear-gradient(214deg, #103813, #0F501D, #7ed859);
+    background-size: 600% 600%;
+ 
+    -webkit-animation: AnimationName 8s ease infinite;
+    -moz-animation: AnimationName 8s ease infinite;
+    animation: AnimationName 8s ease infinite;
+ }
+ 
+ @-webkit-keyframes AnimationName {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+ }
+ @-moz-keyframes AnimationName {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+ }
+ @keyframes AnimationName {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+ }
+ 
+ 
+ .trans {
+    transition-property: background-color;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+}
+.trans:hover {
+    background-color: #103813;
+}
