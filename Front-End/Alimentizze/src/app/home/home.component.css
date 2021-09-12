@@ -40,32 +40,28 @@
 }
 .C{
 
-  color: rgb(3, 8, 48);
+  
   background-color: rgb(94, 104, 138);
 
 }
 .A:hover{
 
-  color: rgb(165, 26, 26);
-  background-color: rgb(192, 65, 65);
+    background-color: rgb(192, 65, 65);
 
 }
 .A{
 
-  color: rgb(150, 7, 7);
   background-color: rgb(117, 30, 30);
 
 }
 .S:hover{
 
-  color: rgb(233, 221, 52);
   background-color: rgb(187, 199, 132);
 
 }
 .S{
 
-  color: rgb(243, 227, 0);
-  background-color: rgb(201, 236, 45);
+   background-color: rgb(201, 236, 45);
 
 }
 
