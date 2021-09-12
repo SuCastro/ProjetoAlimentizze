@@ -66,3 +66,12 @@
 .trans:hover {
     background-color: #103813;
 }
+
+.elementos:hover{
+    border-radius: 8px;
+    bottom: 4px;
+    left: 0;
+    right: 0;
+    top: 4px;
+}
+
