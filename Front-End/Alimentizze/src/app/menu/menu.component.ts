@@ -11,6 +11,10 @@ import { environment } from 'src/environments/environment.prod';
 export class MenuComponent implements OnInit {
   nomeCompleto = environment.nomeCompleto
   id = environment.id
+  houverItemHome = false;
+  houverItemOng = false;
+  houverItemSalvo= false;
+
   constructor(
     private router: Router
 

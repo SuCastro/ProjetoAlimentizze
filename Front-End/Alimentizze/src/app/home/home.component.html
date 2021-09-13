@@ -2,13 +2,13 @@
 
   <div class="row ">
 
-    <div class="col-3 p-70 mt-2 ">
+    <div class="col-3 p-70 mt-3 ">
 
       <div class="row p-0 m-0">
         <div class="radios fundoForms ">
           <div  >
 
-            <div class="row mt-2 p-0 m-0 ">
+            <div class="row mt-2 p-0 m-0 VerdeEscuroAlimentizze">
 
               <div class="col-md-5 p-0 m-0 d-flex align-items-center">
                 <div class="ml-3">
@@ -32,7 +32,7 @@
 
       </div>
 
-      <div class="row mt-1 ">
+      <div class="row mt-2 ">
 
         <div class="col-md-12 ">
 
@@ -87,7 +87,7 @@
                 <div class="col-md-12 fundoForms radios mb-2 ">
 
 
-                  <div class="row d-flex justify-content-start mt-3  text-white ">
+                  <div class="row d-flex justify-content-start mt-3  VerdeEscuroAlimentizze ">
 
                     <div class="col-md-2 d-flex justify-content-start ">
                       <img src="{{postagem.usuario.foto}}" alt="foto ong" width="70px" height="70px"
@@ -122,9 +122,9 @@
                       <div class="radio">
                         <label class="VerdeEscuroAlimentizze" for="descricao">Descrição:</label>
                         <div>
-                          <textarea class="w-100 fundoVerdinClarin mb-3 text-left radio" name="descricao" id=""
-                            cols="25" rows="6">
-                            {{postagem.descricao}}
+                          <textarea class="w-100 fundoVerdinClarin mb-3  radio" name="descricao" style="padding:5px 20px" id=""
+                            cols="25" rows="6" [value]="postagem.descricao">
+                            
                           </textarea>
                         </div>
                       </div>
@@ -234,7 +234,7 @@
     </div>
 
 
-    <div class="col-3 mt-2">
+    <div class="col-3 mt-3">
 
       <div class="row ml-1">
 

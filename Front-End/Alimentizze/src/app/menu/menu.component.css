@@ -80,4 +80,41 @@
 
     background-color: #CAEDBA;
   
- }
+}
+
+
+/*visibilidade nomes tokens menu*/
+.visibility-home{
+
+    visibility: visible!important;
+}
+
+.visibility-home-false{
+
+    visibility: hidden;
+}
+
+
+.visibility-ong{
+
+    visibility: visible!important;
+}
+
+.visibility-ong-false{
+
+    visibility: hidden;
+}
+
+
+.visibility-salvo{
+
+    visibility: visible!important;
+}
+
+.visibility-salvo-false{
+
+    visibility: hidden;
+}
+
+
+
