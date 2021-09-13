@@ -51,7 +51,7 @@
 
                     <div class="trans" >
                         <img src="../../assets/img/icones/2.png" alt="icone ong's" width="70px"
-                            height="40px" class="radios">
+                            height="40px" class="radios"  [routerLink]="['/home']">
                     </div>
 
                 </li>
@@ -60,7 +60,7 @@
                 <li class="nav-item p-30">
 
                     <div class="trans">
-                        <img src="../../assets/img/icones/3.png" alt="icone salvar" width="70px" height="40px" class="radios">
+                        <img src="../../assets/img/icones/3.png" alt="icone salvar" width="70px" height="40px" class="radios"  [routerLink]="['/home']">
 
                     </div>
                 </li>
@@ -95,9 +95,9 @@
 
                             </a>
                             <div class="dropdown-menu  " aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item img-fluid" href=""><img width="30px" height="34px"
-                                        src="../../assets/img/icones/usuario.png" alt=""> Conta</a>
-                                <a class="dropdown-item img-fluid " href=""><img width="30px" height="34px"
+                                <a  [routerLink]="['/home']" class="dropdown-item img-fluid" href=""><img width="30px" height="34px"
+                                        src="../../assets/img/icones/usuario.png" alt="" > Conta</a>
+                                <a  [routerLink]="['/home']" class="dropdown-item img-fluid " href=""><img width="30px" height="34px"
                                         src="../../assets/img/icones/edit-user.png" alt=""> Editar perfil</a>
                                 <a routerLink='/tema' class="dropdown-item" href="">
                                     <img src="../../assets/img/icones/options-lines.png" width="30px" height="34px"
@@ -122,7 +122,7 @@
                 </div>
 
                 <div class="col-md-3 trans">
-                    <a href="">
+                    <a  [routerLink]="['/home']" href="">
                         <img class="mr-3" width="70px" height="40px"
                             src="../../assets/img/icones/5.png" alt="">
                     </a>
@@ -132,7 +132,7 @@
 
 
                 <div class="col-md-3 p-0 trans">
-                    <a href="">
+                    <a  [routerLink]="['/home']" href="">
                         <img width="70px" height="40px" src="../../assets/img/icones/6.png"
                             alt="">
                     </a>
