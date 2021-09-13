@@ -91,6 +91,7 @@ this.tipo = environment.tipoDeUsuario
   }
 
   publicar() {
+    this.tema = new Tema();
     this.tema.id = this.idTema
     this.postagem.tema = this.tema
 
