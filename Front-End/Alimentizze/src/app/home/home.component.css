@@ -65,7 +65,54 @@
 
 }
 
-.a{
+.VerdeEscuroAlimentizze{
 
   color:#0F501D;
 }
+
+.fundoForms{
+  background: rgb(126,217,87);
+  background: linear-gradient(90deg, rgba(126,217,87,1) 52%, rgba(90,132,98,1) 96%);
+
+}
+
+.css-selector {
+  background: linear-gradient(214deg, #103813, #0F501D, #7ed859);
+  background-size: 600% 600%;
+
+  -webkit-animation: AnimationName 8s ease infinite;
+  -moz-animation: AnimationName 8s ease infinite;
+  animation: AnimationName 8s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:50% 0%}
+  50%{background-position:51% 100%}
+  100%{background-position:50% 0%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:50% 0%}
+  50%{background-position:51% 100%}
+  100%{background-position:50% 0%}
+}
+@keyframes AnimationName {
+  0%{background-position:50% 0%}
+  50%{background-position:51% 100%}
+  100%{background-position:50% 0%}
+}
+
+
+.mxr-70{
+  margin-right: 210px;
+}
+
+
+.paralaxGIF{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('https://i.gifer.com/PAA.gif');
+  
+}
+      
+     
