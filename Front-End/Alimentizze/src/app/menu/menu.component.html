@@ -19,8 +19,8 @@
                 <li class="nav-item ml-4">
                     <i class="fas fa-search"></i>
                     <form class="form-inline my-2 my-lg-0">
-                        <input style="width: 20rem; height:2rem ;" class="form-control mr-sm-2 radio fundoVerdinClarin" type="search"
-                            placeholder="Pesquisar " aria-label="Pesquisar">
+                        <input style="width: 20rem; height:2rem ;" class="form-control mr-sm-2 radio fundoVerdinClarin"
+                            type="search" placeholder="Pesquisar " aria-label="Pesquisar">
                         <i class="fas fa-search"></i>
                     </form>
                 </li>
@@ -39,9 +39,13 @@
 
 
                 <li class="nav-item p-30 ">
-                    <div class="trans">
-                        <img src="../../assets/img/icones/1.png" alt="icone home " width="70px"
-                            height="40px" routerLink='/home' class="radios"> 
+                    <div class="trans" (mouseenter)="houverItemHome = true" (mouseleave)="houverItemHome = false">
+                        <img src="../../assets/img/icones/1.png" alt="icone home " width="70px" height="40px"
+                            routerLink='/home' class="radios">
+                        <div class="visibility-home-false" [ngClass]="{'visibility-home': houverItemHome}">
+                            <span class="d-flex justify-content-center" style="color: #CAEDBA;">Home</span>
+                        </div>
+
 
                     </div>
 
@@ -49,9 +53,13 @@
 
                 <li class="nav-item p-30">
 
-                    <div class="trans" >
-                        <img src="../../assets/img/icones/2.png" alt="icone ong's" width="70px"
-                            height="40px" class="radios"  [routerLink]="['/home']">
+                    <div class="trans" (mouseenter)="houverItemOng = true" (mouseleave)="houverItemOng = false">
+                        <img src="../../assets/img/icones/2.png" alt="icone ong's" width="70px" height="40px"
+                            class="radios" [routerLink]="['/home']">
+
+                        <div class="visibility-ong-false" [ngClass]="{'visibility-ong': houverItemOng}">
+                            <span class="d-flex justify-content-center" style="color: #CAEDBA;">Ong's</span>
+                        </div>
                     </div>
 
                 </li>
@@ -59,8 +67,13 @@
 
                 <li class="nav-item p-30">
 
-                    <div class="trans">
-                        <img src="../../assets/img/icones/3.png" alt="icone salvar" width="70px" height="40px" class="radios"  [routerLink]="['/home']">
+                    <div class="trans" (mouseenter)="houverItemSalvo = true" (mouseleave)="houverItemSalvo = false">
+                        <img src="../../assets/img/icones/3.png" alt="icone salvar" width="70px" height="40px"
+                            class="radios" [routerLink]="['/home']">
+
+                        <div class="visibility-salvo-false" [ngClass]="{'visibility-salvo': houverItemSalvo}">
+                            <span class="d-flex justify-content-center" style="color: #CAEDBA;">Salvos</span>
+                        </div>
 
                     </div>
                 </li>
@@ -89,16 +102,16 @@
 
                             <a class="nav-link dropdown trans" id="navbarDropdown" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false"><img
-                                    style="width:87,5px; height:50px color-success"
-                                    src="../../assets/img/icones/4.png"
+                                    style="width:87,5px; height:50px color-success" src="../../assets/img/icones/4.png"
                                     alt="listbarras">
 
                             </a>
                             <div class="dropdown-menu  " aria-labelledby="navbarDropdown">
-                                <a  [routerLink]="['/home']" class="dropdown-item img-fluid" href=""><img width="30px" height="34px"
-                                        src="../../assets/img/icones/usuario.png" alt="" > Conta</a>
-                                <a  [routerLink]="['/home']" class="dropdown-item img-fluid " href=""><img width="30px" height="34px"
-                                        src="../../assets/img/icones/edit-user.png" alt=""> Editar perfil</a>
+                                <a [routerLink]="['/home']" class="dropdown-item img-fluid" href=""><img width="30px"
+                                        height="34px" src="../../assets/img/icones/usuario.png" alt=""> Conta</a>
+                                <a [routerLink]="['/home']" class="dropdown-item img-fluid " href=""><img width="30px"
+                                        height="34px" src="../../assets/img/icones/edit-user.png" alt=""> Editar
+                                    perfil</a>
                                 <a routerLink='/tema' class="dropdown-item" href="">
                                     <img src="../../assets/img/icones/options-lines.png" width="30px" height="34px"
                                         alt=""> Temas</a>
@@ -122,9 +135,8 @@
                 </div>
 
                 <div class="col-md-3 trans">
-                    <a  [routerLink]="['/home']" href="">
-                        <img class="mr-3" width="70px" height="40px"
-                            src="../../assets/img/icones/5.png" alt="">
+                    <a [routerLink]="['/home']" href="">
+                        <img class="mr-3" width="70px" height="40px" src="../../assets/img/icones/5.png" alt="">
                     </a>
 
 
@@ -132,9 +144,8 @@
 
 
                 <div class="col-md-3 p-0 trans">
-                    <a  [routerLink]="['/home']" href="">
-                        <img width="70px" height="40px" src="../../assets/img/icones/6.png"
-                            alt="">
+                    <a [routerLink]="['/home']" href="">
+                        <img width="70px" height="40px" src="../../assets/img/icones/6.png" alt="">
                     </a>
                 </div>
 
