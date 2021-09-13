@@ -34,34 +34,38 @@
 }
 .C:hover{
 
-  color: rgb(31, 40, 129);
-  background-color: rgb(148, 168, 231);
+  color: #060561;
+  background-color: #00C2CB;
 
 }
 .C{
 
-  
-  background-color: rgb(94, 104, 138);
+  color: #00C2CB;
+  background-color: #70e5fa;
 
 }
 .A:hover{
 
-    background-color: rgb(192, 65, 65);
+  color: #d85402;
+  background-color: #FF914D;
 
 }
 .A{
 
-  background-color: rgb(117, 30, 30);
+  color: #fab081;
+  background-color: #FF914D;
 
 }
 .S:hover{
 
-  background-color: rgb(187, 199, 132);
+  color: #ce9f05;
+  background-color: #fce589;
 
 }
 .S{
 
-   background-color: rgb(201, 236, 45);
+  color: #c0b300;
+  background-color: #FFDE59;
 
 }
 
