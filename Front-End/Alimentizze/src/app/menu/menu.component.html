@@ -35,7 +35,7 @@
 
         <div class="col-md-3 mr p-0 m-0 ">
 
-            <ul class="navbar-nav m-auto d-flex align-items-right  ">
+            <ul class="navbar-nav m-auto d-flex align-items-right mt-5 ">
 
 
                 <li class="nav-item p-30 ">
@@ -94,16 +94,20 @@
                 </div>
 
                 <div class="col-md-3 d-flex justify-content-center ">
-                    <ul class="navbar-nav ml-auto d-flex justify-content-endd-flex align-items-center text-center al"
+                    <ul class="navbar-nav ml-auto d-flex align-items-center text-center al mt-5"
                         style="width: 3rem;">
 
                         <li class="nav-item  dropdown m-10" style="margin-right: 130px; width: 15rem;">
 
 
                             <a class="nav-link dropdown trans" id="navbarDropdown" role="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false"><img
+                                aria-haspopup="true" aria-expanded="false" (mouseenter)="houverItemMenu = true"
+                                (mouseleave)="houverItemMenu = false"><img
                                     style="width:87,5px; height:50px color-success" src="../../assets/img/icones/4.png"
                                     alt="listbarras">
+                                <div class="visibility-menu-false" [ngClass]="{'visibility-menu': houverItemMenu}">
+                                    <span class="d-flex justify-content-center" style="color: #CAEDBA;">Menu</span>
+                                </div>
 
                             </a>
                             <div class="dropdown-menu  " aria-labelledby="navbarDropdown">
@@ -112,7 +116,7 @@
                                 <a [routerLink]="['/home']" class="dropdown-item img-fluid " href=""><img width="30px"
                                         height="34px" src="../../assets/img/icones/edit-user.png" alt=""> Editar
                                     perfil</a>
-                                <a routerLink='/tema' class="dropdown-item" href="">
+                                <a *ngIf='auth.ong()' routerLink='/tema' class="dropdown-item" href="">
                                     <img src="../../assets/img/icones/options-lines.png" width="30px" height="34px"
                                         alt=""> Temas</a>
 
@@ -134,18 +138,29 @@
                     </ul>
                 </div>
 
-                <div class="col-md-3 trans">
-                    <a [routerLink]="['/home']" href="">
+                <div class="col-md-3 trans mt-5">
+                    <a [routerLink]="['/home']" href="" (mouseenter)="houverItemNoti = true" (mouseleave)="houverItemNoti= false">
                         <img class="mr-3" width="70px" height="40px" src="../../assets/img/icones/5.png" alt="">
+
+                        <div class="visibility-noti-false" [ngClass]="{'visibility-noti': houverItemNoti}">
+                            <span class="d-flex justify-content-center" style="color: #CAEDBA;">Avisos</span>
+                        </div>
                     </a>
 
 
                 </div>
 
 
-                <div class="col-md-3 p-0 trans">
-                    <a [routerLink]="['/home']" href="">
+                <div class="col-md-3 p-0 trans mt-5">
+                    <a [routerLink]="['/home']" href="" (mouseenter)="houverItemChat = true" (mouseleave)="houverItemChat = false">
                         <img width="70px" height="40px" src="../../assets/img/icones/6.png" alt="">
+
+                        <div class="visibility-chat-false" [ngClass]="{'visibility-chat': houverItemChat}">
+                            <span class="d-flex justify-content-center" style="color: #CAEDBA;">Chat</span>
+                        </div>
+
+
+
                     </a>
                 </div>
 

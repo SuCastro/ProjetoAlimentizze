@@ -33,30 +33,37 @@ export class HomeComponent implements OnInit {
   nome = environment.nomeCompleto
   foto = environment.foto
   id = environment.id
-  tipo:string;
-  
+  tipo: string;
 
- 
+  key = 'data'
+  reverse = true
+
+
+
 
   constructor(
-    private auth: AuthService,
+    public auth: AuthService,
     private router: Router,
     private postagemService: PostagemService,
     private temaService: TemaService
 
-  
+
 
   ) { }
 
   ngOnInit() {
-    window.scroll(0,0)
-this.tipo = environment.tipoDeUsuario
+    window.scroll(0, 0)
+    this.tipo = environment.tipoDeUsuario
     if (environment.token == "") {
       alert('Sua seção expirou, faça o login novamente.')
       this.router.navigate(['/entrar'])
     }
-    console.log("~foto "+this.foto)
-    console.log("~tipo "+this.tipo)
+    
+   
+
+
+    console.log("~foto " + this.foto)
+    console.log("~tipo " + this.tipo)
     this.getAllPostagens()
     this.getAllTemas()
 
@@ -68,14 +75,14 @@ this.tipo = environment.tipoDeUsuario
 
     })
 
-    
-  
+
+
   }
 
   findByIdTema() {
     this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema) => {
       this.tema = resp
-      
+
 
     })
 
@@ -85,7 +92,7 @@ this.tipo = environment.tipoDeUsuario
   getAllPostagens() {
     this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) => {
       this.listaPostagens = resp
-      console.log("~lista postagem "+JSON.stringify(this.listaPostagens))
+      console.log("~lista postagem " + JSON.stringify(this.listaPostagens))
     })
 
   }
@@ -97,8 +104,8 @@ this.tipo = environment.tipoDeUsuario
 
     this.usuario.id = this.idUsuario
     this.postagem.usuario = this.usuario
-    console.log("a ser cadastrada postagem "+JSON.stringify(this.postagem))
-    console.log("tema "+JSON.stringify(this.tema))
+    console.log("a ser cadastrada postagem " + JSON.stringify(this.postagem))
+    console.log("tema " + JSON.stringify(this.tema))
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
       alert("Postagem realizada com sucesso!")

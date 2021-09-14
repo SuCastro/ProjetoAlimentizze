@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import { AuthService } from '../service/auth.service';
 
 
 @Component({
@@ -14,8 +15,12 @@ export class MenuComponent implements OnInit {
   houverItemHome = false;
   houverItemOng = false;
   houverItemSalvo= false;
+  houverItemMenu= false;
+  houverItemNoti= false;
+  houverItemChat= false;
 
   constructor(
+    public auth: AuthService,
     private router: Router
 
 

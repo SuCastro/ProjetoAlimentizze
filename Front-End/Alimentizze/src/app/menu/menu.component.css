@@ -118,3 +118,38 @@
 
 
 
+.visibility-menu{
+
+    visibility: visible!important;
+}
+
+.visibility-menu-false{
+
+    visibility: hidden;
+}
+
+
+
+.visibility-noti{
+
+    visibility: visible!important;
+}
+
+.visibility-noti-false{
+
+    visibility: hidden;
+}
+
+
+.visibility-chat{
+
+    visibility: visible!important;
+}
+
+.visibility-chat-false{
+
+    visibility: hidden;
+}
+
+
+
