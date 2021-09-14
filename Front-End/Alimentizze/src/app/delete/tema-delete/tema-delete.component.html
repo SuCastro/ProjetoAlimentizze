@@ -1,32 +1,40 @@
 <div class="container-fluid css-selector ">
-  <div class="radios">
-    <div class="row mb-5">
-      <div class="col-md-12">
-        <h1 class="text-center text-white">Apagar Tema</h1>
+
+  <div class="row  d-flex justify-content-center ">
+    <div class="col-md-5 fundoForms radio  ml-5 ">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-12">
+          <h1 class="text-center al">Apagar Tema</h1>
+        </div>
       </div>
+
+      <div class="row mb-3">
+        <div class="col-md-12">
+          <h5 class="text-center al">
+            <p>Tem certeza que deseja apagar esse tema?</p>
+            <p>Todas as postagens relacionadas a ele serão igualmente apagadas.</p>
+          </h5>
+        </div>
+      </div>
+  
+      <div class="row mb-4">
+        <div class="col-md-12">
+          <h5 class="text-center text-primary fs-2">Tema: {{tema.categoria}}</h5>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-md-12 d-flex justify-content-center mb-4">
+          <button class="btn btn-danger mxr-7 radio" routerLink='/tema'> Não </button>
+          <button class="btn btn-success radio" (click)='apagar()'> Sim </button>
+        </div>
+      </div>
+  
+      
+
     </div>
 
-    <div class="row mb-3">
-      <div class="col-md-12">
-        <h4 class="text-center text-white">
-          <p>Tem certeza que deseja apagar esse tema?</p>
-          <p>Todas as postagens relacionadas a ele serão igualmente apagadas.</p>
-        </h4>
-      </div>
-    </div>
-
-    <div class="row mb-4">
-      <div class="col-md-12">
-        <h5 class="text-center text-primary">Tema: {{tema.categoria}}</h5>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-12 d-flex justify-content-center">
-        <button class="btn btn-danger mr-4 radio" routerLink='/tema'>Não</button>
-        <button class="btn btn-success radio" (click)='apagar()'>Sim</button>
-      </div>
-    </div>
   </div>
+  
 
 </div>
