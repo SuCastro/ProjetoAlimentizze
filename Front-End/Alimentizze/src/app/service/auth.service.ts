@@ -48,4 +48,15 @@ export class AuthService {
     return ok
   }
 
+
+  ong(){
+    let ok = false // == let ok: boolean = false ---> pode ser escrita com mais tipagem
+
+    if(environment.tipoDeUsuario == 'ONG'){
+      ok = true
+    }
+
+    return ok 
+  }
+
 }

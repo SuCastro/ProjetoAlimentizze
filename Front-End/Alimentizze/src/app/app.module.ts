@@ -18,6 +18,7 @@ import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component'
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 import { MinhasPostagensComponent } from './minhas-postagens/minhas-postagens.component';
+import { OrderModule } from 'ngx-order-pipe';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { MinhasPostagensComponent } from './minhas-postagens/minhas-postagens.co
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+    OrderModule
   ],
   providers: [{
     provide: LocationStrategy,

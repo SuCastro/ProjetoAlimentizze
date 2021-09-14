@@ -2,7 +2,7 @@
 
   <div class="row ">
 
-    <div class="col-3 p-70 mt-3 ">
+    <div class="col-3 p-70 mt-4 ">
 
       <div class="row p-0 m-0">
         <div class="radios fundoForms ">
@@ -12,7 +12,7 @@
 
               <div class="col-md-5 p-0 m-0 d-flex align-items-center">
                 <div class="ml-3">
-                  <img src="{{foto}}" alt="foto usuario" width="90px" height="90px" class="img-fluid rounded-circle">
+                  <img src="{{foto}}" alt="foto usuario" width="90px" height="90px" class="img-fluid rounded-circle mt-2 mb-2">
                 </div>
               </div>
               <div class="col-md-7 d-flex align-items-center">
@@ -40,13 +40,13 @@
             <a href="" class="list-group-item list-group-item-action text-center bg-info text-white"  [routerLink]="['/home']">
               DESTAQUE
             </a>
-            <a href="" class="list-group-item list-group-item-action fundoForms" data-toggle="modal" data-target="#novaPostagem">
+            <a *ngIf='auth.ong()' href="" class="list-group-item list-group-item-action fundoForms" data-toggle="modal" data-target="#novaPostagem">
               Nova Postagem
             </a>
-            <a href="" class="list-group-item list-group-item-action fundoForms" routerLink='/minhas-postagens'>Minhas
+            <a *ngIf='auth.ong()' href="" class="list-group-item list-group-item-action fundoForms" routerLink='/minhas-postagens'>Minhas
               Postagens</a>
 
-            <a href="" class="list-group-item list-group-item-action fundoForms" routerLink='/tema'>Temas</a>
+            <a *ngIf='auth.ong()' href="" class="list-group-item list-group-item-action fundoForms" routerLink='/tema'>Temas</a>
             <a href="" class="list-group-item list-group-item-action fundoForms"  [routerLink]="['/home']">Postagens Salvas</a>
           </div>
 
@@ -63,17 +63,17 @@
     </div>
 
 
-    <div class="col-md-6 mt-2">
+    <div class="col-md-6 mt-4">
 
       <!-- PARALAX -->
-      <div class="jumbotron mt-3 paralaxGIF">
+      <div class="jumbotron mt-4 paralaxGIF">
 
       </div>
 
 
 
       <!-- Meu card -->
-      <div *ngFor="let postagem of listaPostagens">
+      <div *ngFor="let postagem of listaPostagens | orderBy : key : reverse">
         <!-- ng-for coloca aqui -->
         <div class="row">
           <div class=" radio">
@@ -234,7 +234,7 @@
     </div>
 
 
-    <div class="col-3 mt-3">
+    <div class="col-3 mt-4">
 
       <div class="row ml-1">
 
