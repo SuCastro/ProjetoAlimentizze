@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { UsuarioDTO } from '../modelo/UsuarioDTO';
+import { AlertasService } from '../service/alertas.service';
 
 import { AuthService } from '../service/auth.service';
 
@@ -15,54 +16,55 @@ export class EntrarComponent implements OnInit {
   usuarioDTO: UsuarioDTO = new UsuarioDTO()
 
   constructor(
-  private auth: AuthService,
-  private router: Router
+    private auth: AuthService,
+    private router: Router,
+    private alertas: AlertasService
 
   ) { }
 
-  ngOnInit()  {
-    
-    window.scroll(0,0)
+  ngOnInit() {
 
-    if(environment.token == ''){
-      /* alert('Sua sessão expirou, faça login novamente!!!')*/
-       this.router.navigate(['/entrar'])  
-     }
-    
+    window.scroll(0, 0)
+
+    if (environment.token == '') {
+      this.alertas.showAlertInfo('Sua sessão expirou, faça login novamente!!!')
+      this.router.navigate(['/entrar'])
+    }
+
 
   }
 
-entrar(){
-  this.auth.entrar(this.usuarioDTO).subscribe((resp:UsuarioDTO) => {
-    console.log(JSON.stringify(this.usuarioDTO))
+  entrar() {
+    this.auth.entrar(this.usuarioDTO).subscribe((resp: UsuarioDTO) => {
+      console.log(JSON.stringify(this.usuarioDTO))
 
-    this.usuarioDTO = resp
-    console.log("~resp foto"+resp.foto)
-    environment.token = this.usuarioDTO.token
-    environment.nomeCompleto = this.usuarioDTO.nomeCompleto
-    environment.foto = resp.foto
-    environment.id = this.usuarioDTO.id
-    environment.email = this.usuarioDTO.email
-    environment.tipoDeUsuario = this.usuarioDTO.tipoDeUsuario
+      this.usuarioDTO = resp
+      console.log("~resp foto" + resp.foto)
+      environment.token = this.usuarioDTO.token
+      environment.nomeCompleto = this.usuarioDTO.nomeCompleto
+      environment.foto = resp.foto
+      environment.id = this.usuarioDTO.id
+      environment.email = this.usuarioDTO.email
+      environment.tipoDeUsuario = this.usuarioDTO.tipoDeUsuario
 
-    console.log(environment.token)
-    console.log(environment.nomeCompleto)
-    console.log(environment.foto)
-    console.log(environment.id)
-    console.log(environment.email)
-    console.log(environment.tipoDeUsuario)
+      console.log(environment.token)
+      console.log(environment.nomeCompleto)
+      console.log(environment.foto)
+      console.log(environment.id)
+      console.log(environment.email)
+      console.log(environment.tipoDeUsuario)
 
-    this.router.navigate(["/home"])
+      this.router.navigate(["/home"])
 
-  }, erro => {
-    if(erro.status == 500){
-      alert("Usuário ou senha estão incorretos!")
-    }
-    if(erro.status == 400){
-      alert("Usuário ou senha estão incorretos!")
-    }
-  })
-} 
+    }, erro => {
+      if (erro.status == 500) {
+        this.alertas.showAlertDanger("Usuário ou senha estão incorretos!")
+      }
+      if (erro.status == 400) {
+        this.alertas.showAlertDanger("Usuário ou senha estão incorretos!")
+      }
+    })
+  }
 
 
 }

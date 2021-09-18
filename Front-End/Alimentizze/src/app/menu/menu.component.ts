@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 
 
@@ -21,7 +22,8 @@ export class MenuComponent implements OnInit {
 
   constructor(
     public auth: AuthService,
-    private router: Router
+    private router: Router,
+    private alertas: AlertasService
 
 
   ) { }
@@ -29,7 +31,7 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
 
     if (environment.token == "") {
-      alert('Sua seção expirou, faça o login novamente.')
+      this.alertas.showAlertInfo('Sua seção expirou, faça o login novamente.')
       this.router.navigate(['/entrar'])
     }
     
