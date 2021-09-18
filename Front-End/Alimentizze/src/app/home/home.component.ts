@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment.prod';
 import { Postagem } from '../modelo/Postagem';
 import { Tema } from '../modelo/Tema';
 import { Usuario } from '../modelo/Usuario';
+import { AlertasService } from '../service/alertas.service';
 
 import { AuthService } from '../service/auth.service';
 import { PostagemService } from '../service/postagem.service';
@@ -45,7 +46,8 @@ export class HomeComponent implements OnInit {
     public auth: AuthService,
     private router: Router,
     private postagemService: PostagemService,
-    private temaService: TemaService
+    private temaService: TemaService,
+    private alertas: AlertasService
 
 
 
@@ -55,7 +57,7 @@ export class HomeComponent implements OnInit {
     window.scroll(0, 0)
     this.tipo = environment.tipoDeUsuario
     if (environment.token == "") {
-      alert('Sua seção expirou, faça o login novamente.')
+      this.alertas.showAlertInfo('Sua seção expirou, faça o login novamente.')
       this.router.navigate(['/entrar'])
     }
     
@@ -108,7 +110,7 @@ export class HomeComponent implements OnInit {
     console.log("tema " + JSON.stringify(this.tema))
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
-      alert("Postagem realizada com sucesso!")
+      this.alertas.showAlertSuccess("Postagem realizada com sucesso!")
       this.postagem = new Postagem()
       this.getAllPostagens()
 

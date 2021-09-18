@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Usuario } from '../modelo/Usuario';
+import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 
 
@@ -19,7 +20,10 @@ export class CadastrarComponent implements OnInit {
 
   constructor(
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private alertas: AlertasService
+
+
   ) { }
 
   ngOnInit() {
@@ -29,7 +33,7 @@ export class CadastrarComponent implements OnInit {
 
   selecionarRadio(select: string){
     this.tipoDeUsuario = select;
-    alert("~select usuario "+this.tipoDeUsuario);
+    this.alertas.showAlertInfo("Você selecionou " + this.tipoDeUsuario + " como tipo de Usuário");
   }
 
   confirmSenha(event: any) {
@@ -47,14 +51,14 @@ export class CadastrarComponent implements OnInit {
     
     
     if (this.usuario.senha != this.confirmarSenha) {
-      alert("A senha está incorreta.")
+      this.alertas.showAlertDanger("A senha está incorreta.")
     }
     else {
       this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) => {
         this.usuario = resp
         console.log(JSON.stringify(resp))
         this.router.navigate(["/entrar"])
-        alert("Usuário cadastrado com sucesso!")
+        this.alertas.showAlertSuccess("Usuário cadastrado com sucesso!")
       })
     }
 
