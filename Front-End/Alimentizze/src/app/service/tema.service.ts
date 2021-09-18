@@ -12,31 +12,35 @@ export class TemaService {
   constructor(
     private http: HttpClient) { }
 
-    token = {
-headers: new HttpHeaders().set('Authorization', environment.token)
+  token = {
+    headers: new HttpHeaders().set('Authorization', environment.token)
 
 
-}
-getAllTema(): Observable<Tema[]>{
-  return this.http.get<Tema[]>('https://projetoalimentizze.herokuapp.com/tema')
-    }
-    getByIdTema(id: number): Observable<Tema>{
-      return this.http.get<Tema>(`https://projetoalimentizze.herokuapp.com/tema/${id}`)
-    }
+  }
+  getAllTema(): Observable<Tema[]> {
+    return this.http.get<Tema[]>('https://projetoalimentizze.herokuapp.com/tema')
+  }
+  getByIdTema(id: number): Observable<Tema> {
+    return this.http.get<Tema>(`https://projetoalimentizze.herokuapp.com/tema/${id}`)
+  }
 
-postTema(tema : Tema): Observable<Tema>{
-  return this.http.post<Tema>('https://projetoalimentizze.herokuapp.com/tema', tema)
+  getByCategoriaTema(categoria: string): Observable<Tema[]>{
+    return this.http.get<Tema[]>(`https://projetoalimentizze.herokuapp.com/tema/categoria/${categoria}`)
+  }
 
-}
 
-putTema(tema: Tema): Observable<Tema>{
-  return this.http.put<Tema>('https://projetoalimentizze.herokuapp.com/tema', tema)
-}
-deleteTema(id: number) {
-  return this.http.delete(`https://projetoalimentizze.herokuapp.com/tema/${id}`)
-}
-//getByNomeTema(nome: string): Observable<Tema[]>{
- // return this.http.get<Tema[]>(`http://localhost:8080/tema/nome/${nome}`)
-//}
 
+
+  postTema(tema: Tema): Observable<Tema> {
+    return this.http.post<Tema>('https://projetoalimentizze.herokuapp.com/tema', tema)
+
+  }
+
+  putTema(tema: Tema): Observable<Tema> {
+    return this.http.put<Tema>('https://projetoalimentizze.herokuapp.com/tema', tema)
+  }
+  deleteTema(id: number) {
+    return this.http.delete(`https://projetoalimentizze.herokuapp.com/tema/${id}`)
+  }
+  
 }

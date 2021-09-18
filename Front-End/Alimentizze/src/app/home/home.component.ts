@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
   tema: Tema = new Tema()
   listaTemas: Tema[]
   idTema: number
-  nomeTema: string
+  categoriaTema: string
 
 
   usuario: Usuario = new Usuario()
@@ -57,7 +57,7 @@ export class HomeComponent implements OnInit {
     window.scroll(0, 0)
     this.tipo = environment.tipoDeUsuario
     if (environment.token == "") {
-      this.alertas.showAlertInfo('Sua seção expirou, faça o login novamente.')
+      //this.alertas.showAlertInfo('Sua seção expirou, faça o login novamente.')
       this.router.navigate(['/entrar'])
     }
     
@@ -120,10 +120,35 @@ export class HomeComponent implements OnInit {
   }
 
 
+  findByTituloPostagem(){
+
+    if(this.tituloPost == ''){
+      this.getAllPostagens()
+    } 
+    else {
+      this.postagemService.getByTituloPostagem(this.tituloPost).subscribe((resp: Postagem[]) => {
+        this.listaPostagens = resp
+      })
+
+    }
 
 
+    
+  }
 
 
+  findByCategoriaTema(){
+    if(this.categoriaTema == ''){
+      this.getAllTemas()
+    } 
+    else {
+      this.temaService.getByCategoriaTema(this.categoriaTema).subscribe((resp: Tema[]) => {
+        this.listaTemas = resp
+      })
+
+    }
+
+  }
 
 
 
