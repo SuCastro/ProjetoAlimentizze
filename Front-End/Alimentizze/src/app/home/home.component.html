@@ -71,6 +71,19 @@
       </div>
 
 
+      <!-- Pesquisar Titulo Postagem-->
+      <div class="row d-flex justify-content-center ">
+        <div class="col-md-7">
+          <div class="form-group ">
+            <input [(ngModel)]="tituloPost"  type="text" class="form-control fundoVerdinClarin" id="titulo" placeholder="Digite um Título de Postagem para pesquisar" (keyup)='findByTituloPostagem()' >
+          </div>
+
+        </div>
+
+      </div>
+
+
+
 
       <!-- Meu card -->
       <div *ngFor="let postagem of listaPostagens | orderBy : key : reverse">
